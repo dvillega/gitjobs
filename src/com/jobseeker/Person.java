@@ -6,13 +6,26 @@
 
 package com.jobseeker;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  *
  * @author christianlevi
  */
-public class Person {
+@Entity
+@Table(name="person")
+public class Person implements Serializable, Cloneable {
+
+    private static final long serialVersionUID = -7049957706738879274L;
     
     //private instances
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
     private String name;
     private int address_id;
@@ -38,6 +51,14 @@ public class Person {
     public void setName(String newName){
         this.name = newName;
     }
+
+    public int getAddress_id(){
+        return this.address_id;
+    }
+
+    public void setAddress_id(int newId){
+        this.address_id = newId;
+    }
     
     public int getAddressId(){
         return this.address_id;
@@ -45,6 +66,14 @@ public class Person {
     
     public void setAddressId(int newId){
         this.address_id = newId;
+    }
+
+    public String getZip_code(){
+        return this.zip_code;
+    }
+
+    public void setZip_code(String newZip){
+        this.zip_code = newZip;
     }
     
     public String getZipCode(){

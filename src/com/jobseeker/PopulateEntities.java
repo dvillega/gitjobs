@@ -58,8 +58,8 @@ class PersonMethods{
         session.beginTransaction();
         Person p = new Person();
         p.setName(newName);
-        p.setAddressId(newId);
-        p.setZipCode(newZip);
+        p.setAddress_id(newId);
+        p.setZip_code(newZip);
         p.setEmail(newEmail);
         p.setGender(gender);
         session.save(p);

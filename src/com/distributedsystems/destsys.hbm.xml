@@ -9,7 +9,7 @@
              This class contains Person details for Clients looking for Jobs
          </meta>
          <id name="id" type="int" column="id">
-             <generator class="native"/>
+             <generator class="identity"/>
          </id>
          <property name="name" column="name" type="string" />
          <property name="address_id" column="address_id" type="int" />
