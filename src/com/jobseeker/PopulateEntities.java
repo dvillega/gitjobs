@@ -104,7 +104,7 @@ class PersonMethods{
         
         //The above query can also be achieved with Criteria & Restrictions API.
         Criteria cri = session.createCriteria(Person.class);
-        cri = cri.add(Restrictions.eq("bookName", name));
+        cri = cri.add(Restrictions.eq("name", name));
         list = cri.list();
         System.out.println("Getting Person Details using Criteria API. \n"+list);
  
@@ -115,7 +115,7 @@ class PersonMethods{
     public void countPerson(){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
-        List list = session.createQuery("select count(*) from person").list();
+        List list = session.createQuery("select count(*) from Person").list();
         System.out.println("Aggregate function count \n"+list);
         session.getTransaction().commit();
     }   
