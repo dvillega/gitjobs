@@ -1,5 +1,5 @@
 package com.jobseeker;
-// Generated Apr 6, 2014 6:09:43 PM by Hibernate Tools 3.6.0
+// Generated Apr 6, 2014 6:32:32 PM by Hibernate Tools 3.6.0
 
 
 
@@ -9,21 +9,71 @@ package com.jobseeker;
 public class Person  implements java.io.Serializable {
 
 
-     private PersonId id;
+     private int id;
+     private String name;
+     private Integer addressId;
+     private String zipCode;
+     private String email;
+     private Character gender;
 
     public Person() {
     }
 
-    public Person(PersonId id) {
+	
+    public Person(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+    public Person(int id, String name, Integer addressId, String zipCode, String email, Character gender) {
        this.id = id;
+       this.name = name;
+       this.addressId = addressId;
+       this.zipCode = zipCode;
+       this.email = email;
+       this.gender = gender;
     }
    
-    public PersonId getId() {
+    public int getId() {
         return this.id;
     }
     
-    public void setId(PersonId id) {
+    public void setId(int id) {
         this.id = id;
+    }
+    public String getName() {
+        return this.name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    public Integer getAddressId() {
+        return this.addressId;
+    }
+    
+    public void setAddressId(Integer addressId) {
+        this.addressId = addressId;
+    }
+    public String getZipCode() {
+        return this.zipCode;
+    }
+    
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
+    public String getEmail() {
+        return this.email;
+    }
+    
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public Character getGender() {
+        return this.gender;
+    }
+    
+    public void setGender(Character gender) {
+        this.gender = gender;
     }
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Apr 6, 2014 6:09:43 PM by Hibernate Tools 3.6.0 -->
+<!-- Generated Apr 6, 2014 6:32:32 PM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
     <class name="com.employer.Company" table="company" schema="public">
         <id name="id" type="int">
@@ -10,6 +10,12 @@
         </id>
         <property name="name" type="string">
             <column name="name" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="64" />
+        </property>
+        <property name="addressId" type="java.lang.Integer">
+            <column name="address_id" />
         </property>
     </class>
 </hibernate-mapping>

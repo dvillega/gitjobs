@@ -64,7 +64,7 @@ class CompanyMethods{
         session.beginTransaction();
         Company c = new Company();
         c.setName(newName);
-        c.setAddress_id(newId);
+        c.setAddressId(newId);
         c.setEmail(newEmail);
         session.save(c);
         session.getTransaction().commit();

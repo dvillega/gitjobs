@@ -1,28 +1,27 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Apr 6, 2014 6:09:43 PM by Hibernate Tools 3.6.0 -->
+<!-- Generated Apr 6, 2014 6:32:32 PM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
     <class name="com.jobseeker.Person" table="person" schema="public">
-        <composite-id name="id" class="com.jobseeker.PersonId">
-            <key-property name="name" type="string">
-                <column name="name" />
-            </key-property>
-            <key-property name="addressId" type="java.lang.Integer">
-                <column name="address_id" />
-            </key-property>
-            <key-property name="zipCode" type="string">
-                <column name="zip_code" length="12" />
-            </key-property>
-            <key-property name="email" type="string">
-                <column name="email" length="64" />
-            </key-property>
-            <key-property name="gender" type="java.lang.Character">
-                <column name="gender" length="1" />
-            </key-property>
-            <key-property name="id" type="int">
-                <column name="id" />
-            </key-property>
-        </composite-id>
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="addressId" type="java.lang.Integer">
+            <column name="address_id" />
+        </property>
+        <property name="zipCode" type="string">
+            <column name="zip_code" length="12" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="64" />
+        </property>
+        <property name="gender" type="java.lang.Character">
+            <column name="gender" length="1" />
+        </property>
     </class>
 </hibernate-mapping>

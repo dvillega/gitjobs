@@ -15,7 +15,5 @@
     <property name="hibernate.current_session_context_class">thread</property>
     <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
     <!-- Mapping resource configuration files -->
-    <!--<mapping resource="com/distributedsystems/destsys.hbm.xml"/>-->
-    <mapping resource="com/distributedsystems/destsys.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

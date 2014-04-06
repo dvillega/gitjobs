@@ -1,5 +1,5 @@
 package com.skill;
-// Generated Apr 6, 2014 6:09:43 PM by Hibernate Tools 3.6.0
+// Generated Apr 6, 2014 6:32:32 PM by Hibernate Tools 3.6.0
 
 
 
