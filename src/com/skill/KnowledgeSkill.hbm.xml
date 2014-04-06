@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 6, 2014 6:09:43 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.skill.KnowledgeSkill" table="knowledge_skill" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="ksCode" type="string">
+            <column name="ks_code" length="32" not-null="true" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" not-null="true" />
+        </property>
+        <property name="level" type="string">
+            <column name="level" length="12" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

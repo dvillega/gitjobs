@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 6, 2014 6:09:43 PM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="com.employer.Position" table="position" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="posCode" type="string">
+            <column name="pos_code" length="32" not-null="true" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="64" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="basePayType" type="string">
+            <column name="base_pay_type" length="12" not-null="true" />
+        </property>
+        <property name="basePay" type="big_decimal">
+            <column name="base_pay" precision="12" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
