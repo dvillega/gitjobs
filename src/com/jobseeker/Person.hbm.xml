@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Apr 6, 2014 6:32:32 PM by Hibernate Tools 3.6.0 -->
+<!-- Generated Apr 7, 2014 9:30:24 PM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
     <class name="com.jobseeker.Person" table="person" schema="public">
         <id name="id" type="int">
             <column name="id" />
             <generator class="assigned" />
         </id>
+        <many-to-one name="address" class="com.details.Address" fetch="select">
+            <column name="address_id" />
+        </many-to-one>
         <property name="name" type="string">
             <column name="name" not-null="true" />
-        </property>
-        <property name="addressId" type="java.lang.Integer">
-            <column name="address_id" />
         </property>
         <property name="zipCode" type="string">
             <column name="zip_code" length="12" />
@@ -23,5 +23,17 @@
         <property name="gender" type="java.lang.Character">
             <column name="gender" length="1" />
         </property>
+        <set name="applieses" table="applies" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="person_id" not-null="true" />
+            </key>
+            <one-to-many class="com.employer.Applies" />
+        </set>
+        <set name="takeses" table="takes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="person_id" not-null="true" />
+            </key>
+            <one-to-many class="com.education.Takes" />
+        </set>
     </class>
 </hibernate-mapping>

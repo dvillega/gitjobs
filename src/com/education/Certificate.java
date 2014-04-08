@@ -1,5 +1,5 @@
 package com.education;
-// Generated Apr 6, 2014 6:32:32 PM by Hibernate Tools 3.6.0
+// Generated Apr 7, 2014 9:30:24 PM by Hibernate Tools 3.6.0
 
 
 import java.util.Date;

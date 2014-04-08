@@ -1,18 +1,21 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Apr 6, 2014 6:32:32 PM by Hibernate Tools 3.6.0 -->
+<!-- Generated Apr 7, 2014 9:30:24 PM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
     <class name="com.employer.Job" table="job" schema="public">
         <id name="id" type="int">
             <column name="id" />
             <generator class="assigned" />
         </id>
+        <many-to-one name="company" class="com.employer.Company" fetch="select">
+            <column name="company_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="position" class="com.employer.Position" fetch="select">
+            <column name="pos_id" not-null="true" />
+        </many-to-one>
         <property name="jobCode" type="string">
             <column name="job_code" length="32" not-null="true" />
-        </property>
-        <property name="posId" type="int">
-            <column name="pos_id" not-null="true" />
         </property>
         <property name="type" type="string">
             <column name="type" length="12" not-null="true" />
@@ -23,8 +26,11 @@
         <property name="payRate" type="string">
             <column name="pay_rate" length="12" not-null="true" />
         </property>
-        <property name="companyId" type="int">
-            <column name="company_id" not-null="true" />
-        </property>
+        <set name="applieses" table="applies" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="job_id" not-null="true" />
+            </key>
+            <one-to-many class="com.employer.Applies" />
+        </set>
     </class>
 </hibernate-mapping>

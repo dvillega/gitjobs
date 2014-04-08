@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Apr 6, 2014 6:32:32 PM by Hibernate Tools 3.6.0 -->
+<!-- Generated Apr 7, 2014 9:30:24 PM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
     <class name="com.education.Section" table="section" schema="public">
         <id name="id" type="int">
@@ -29,5 +29,19 @@
         <property name="status" type="char">
             <column name="status" length="1" not-null="true" />
         </property>
+        <set name="educInstitutes" table="offers_course" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="section_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.education.EducInstitute">
+                <column name="educ_institute_id" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="takeses" table="takes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="section_id" not-null="true" />
+            </key>
+            <one-to-many class="com.education.Takes" />
+        </set>
     </class>
 </hibernate-mapping>

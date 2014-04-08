@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Apr 6, 2014 6:32:32 PM by Hibernate Tools 3.6.0 -->
+<!-- Generated Apr 7, 2014 9:30:24 PM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
     <class name="com.details.Address" table="address" schema="public">
         <id name="id" type="int">
@@ -29,5 +29,17 @@
         <property name="country" type="string">
             <column name="country" length="64" not-null="true" />
         </property>
+        <set name="persons" table="person" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="address_id" />
+            </key>
+            <one-to-many class="com.jobseeker.Person" />
+        </set>
+        <set name="companies" table="company" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="address_id" />
+            </key>
+            <one-to-many class="com.employer.Company" />
+        </set>
     </class>
 </hibernate-mapping>

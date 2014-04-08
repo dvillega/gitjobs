@@ -2,14 +2,18 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="va_skill_dist_system"/>
-  <table-filter match-name="course" package="com.education" />
   <table-filter match-name="company" package="com.employer" />
-  <table-filter match-name="job" package="com.employer" />
   <table-filter match-name="knowledge_skill" package="com.skill" />
-  <table-filter match-name="address" package="com.details" />
-  <table-filter match-name="person" package="com.jobseeker" />
   <table-filter match-name="certificate" package="com.education" />
-  <table-filter match-name="position" package="com.employer" />
+  <table-filter match-name="takes" package="com.education" />
+  <table-filter match-name="course" package="com.education" />
+  <table-filter match-name="job" package="com.employer" />
+  <table-filter match-name="address" package="com.details" />
   <table-filter match-name="section" package="com.education" />
+  <table-filter match-name="person" package="com.jobseeker" />
   <table-filter match-name="educ_institute" package="com.education" />
+  <table-filter match-name="position" package="com.employer" />
+  <table-filter match-name="offers_course" package="com.education" />
+  <table-filter match-name="position_req_skills" package="com.employer" />
+  <table-filter match-name="applies" package="com.employer" />
 </hibernate-reverse-engineering>

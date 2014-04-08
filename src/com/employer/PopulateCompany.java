@@ -6,6 +6,7 @@
 
 package com.employer;
 
+import com.details.Address;
 import com.jobseeker.HibernateUtil;
 import java.util.Iterator;
 import java.util.List;
@@ -27,10 +28,28 @@ public class PopulateCompany {
         CompanyMethods cm = new CompanyMethods();
         
         // Add companies
-        cm.addCompany("FooBar Systems",1,"foo@bar.com");
-        cm.addCompany("Too Industries", 2, "too@wtf.com");
-        cm.addCompany("Testing123", 3, "test@ees.com");
-        cm.addCompany("Yoyodyne Tech", 4, "yoyo@tech.com");
+        Address add1 = new Address();
+        add1.setAddress1("1 Test St");
+        add1.setCity("Metairie");
+        add1.setState("LA");
+        add1.setZip("70001");
+        Address add2 = new Address();
+        add2.setAddress1("2 Test St");
+        add2.setAddress2("2-B");
+        add2.setCity("New Orleans");
+        add2.setState("LA");
+        add2.setCounty("Orleans");
+        add2.setZip("70001");
+        Address add3 = new Address();
+        add3.setAddress1("3 Test St");
+        add3.setCity("Slidell");
+        add3.setState("LA");
+        add3.setCountry("USA");
+        add3.setZip("70128");
+        cm.addCompany("FooBar Systems",add1,"foo@bar.com");
+        cm.addCompany("Too Industries", add2, "too@wtf.com");
+        cm.addCompany("Testing123", add3, "test@ees.com");
+        cm.addCompany("Yoyodyne Tech", null, "yoyo@tech.com");
         
         // List companies
         cm.listCompanies();
@@ -59,12 +78,13 @@ public class PopulateCompany {
 
 class CompanyMethods{
     //Using persistent objects to store data into the database.
-    public void addCompany(String newName, int newId,  String newEmail){
+    public void addCompany(String newName, Address newAddress,  String newEmail){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
+        session.save(newAddress);
         Company c = new Company();
         c.setName(newName);
-        c.setAddressId(newId);
+        c.setAddress(newAddress);
         c.setEmail(newEmail);
         session.save(c);
         session.getTransaction().commit();
