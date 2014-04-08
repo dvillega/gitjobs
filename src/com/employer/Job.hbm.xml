@@ -1,18 +1,20 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Apr 7, 2014 9:30:24 PM by Hibernate Tools 3.6.0 -->
+<!-- Generated Apr 8, 2014 12:02:02 AM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
     <class name="com.employer.Job" table="job" schema="public">
         <id name="id" type="int">
             <column name="id" />
-            <generator class="assigned" />
+            <generator class="sequence" >
+                <param name="sequence">job_id_seq</param>
+            </generator>
         </id>
+        <many-to-one name="position" class="com.employer.Position" fetch="select">
+            <column name="position_id" not-null="true" />
+        </many-to-one>
         <many-to-one name="company" class="com.employer.Company" fetch="select">
             <column name="company_id" not-null="true" />
-        </many-to-one>
-        <many-to-one name="position" class="com.employer.Position" fetch="select">
-            <column name="pos_id" not-null="true" />
         </many-to-one>
         <property name="jobCode" type="string">
             <column name="job_code" length="32" not-null="true" />

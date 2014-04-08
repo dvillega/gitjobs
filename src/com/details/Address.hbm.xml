@@ -1,12 +1,14 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Apr 7, 2014 9:30:24 PM by Hibernate Tools 3.6.0 -->
+<!-- Generated Apr 8, 2014 12:02:02 AM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
     <class name="com.details.Address" table="address" schema="public">
         <id name="id" type="int">
             <column name="id" />
-            <generator class="assigned" />
+            <generator class="sequence" >
+                <param name="sequence">address_id_seq</param>
+            </generator>
         </id>
         <property name="address1" type="string">
             <column name="address_1" length="64" not-null="true" />
@@ -27,7 +29,7 @@
             <column name="county" length="32" />
         </property>
         <property name="country" type="string">
-            <column name="country" length="64" not-null="true" />
+            <column name="country" length="64" />
         </property>
         <set name="persons" table="person" inverse="true" lazy="true" fetch="select">
             <key>

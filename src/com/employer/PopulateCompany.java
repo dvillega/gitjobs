@@ -81,7 +81,8 @@ class CompanyMethods{
     public void addCompany(String newName, Address newAddress,  String newEmail){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
-        session.save(newAddress);
+        if(newAddress != null)
+            session.save(newAddress);
         Company c = new Company();
         c.setName(newName);
         c.setAddress(newAddress);

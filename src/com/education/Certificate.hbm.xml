@@ -1,12 +1,14 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Apr 7, 2014 9:30:24 PM by Hibernate Tools 3.6.0 -->
+<!-- Generated Apr 8, 2014 12:02:02 AM by Hibernate Tools 3.6.0 -->
 <hibernate-mapping>
     <class name="com.education.Certificate" table="certificate" schema="public">
         <id name="id" type="int">
             <column name="id" />
-            <generator class="assigned" />
+            <generator class="sequence" >
+                <param name="sequence">certificate_id_seq</param>
+            </generator>
         </id>
         <property name="cerCode" type="string">
             <column name="cer_code" length="32" not-null="true" />

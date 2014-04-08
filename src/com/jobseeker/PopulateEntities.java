@@ -6,6 +6,7 @@
 
 package com.jobseeker;
 
+import com.details.Address;
 import java.util.Iterator;
 import java.util.List;
 import org.hibernate.Criteria;
@@ -23,10 +24,28 @@ public class PopulateEntities {
         PersonMethods pm = new PersonMethods();
  
         //Adding people
-        pm.addPerson("Testing Guy1",1,"70001","tguy1@gmail.com",'m');
-        pm.addPerson("Testing Guy2",7,"70003","tguy2@aol.com",'m');
-        pm.addPerson("Testing Girl1",14,"70124","tgirl1@gmail.com",'f');
-        pm.addPerson("Testing Girl2",21,"70123","tgirl2@hotmail.com",'f');
+        Address add1 = new Address();
+        add1.setAddress1("1 Test St");
+        add1.setCity("Metairie");
+        add1.setState("LA");
+        add1.setZip("70001");
+        Address add2 = new Address();
+        add2.setAddress1("2 Test St");
+        add2.setAddress2("2-B");
+        add2.setCity("New Orleans");
+        add2.setState("LA");
+        add2.setCounty("Orleans");
+        add2.setZip("70001");
+        Address add3 = new Address();
+        add3.setAddress1("3 Test St");
+        add3.setCity("Slidell");
+        add3.setState("LA");
+        add3.setCountry("USA");
+        add3.setZip("70128");
+        pm.addPerson("Testing Guy1",add1,"70001","tguy1@gmail.com",'m');
+        pm.addPerson("Testing Guy2",add2,"70003","tguy2@aol.com",'m');
+        pm.addPerson("Testing Girl1",add3,"70124","tgirl1@gmail.com",'f');
+        pm.addPerson("Testing Girl2",null,"70123","tgirl2@hotmail.com",'f');
  
         //Listing added books
         pm.listPeople();
@@ -53,12 +72,12 @@ public class PopulateEntities {
  
 class PersonMethods{
     //Using persistent objects to store data into the database.
-    public void addPerson(String newName, int newId, String newZip, String newEmail, char gender){
+    public void addPerson(String newName, Address newAddress, String newZip, String newEmail, char gender){
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
         Person p = new Person();
         p.setName(newName);
-        p.setAddressId(newId);
+        p.setAddress(newAddress);
         p.setZipCode(newZip);
         p.setEmail(newEmail);
         p.setGender(gender);
