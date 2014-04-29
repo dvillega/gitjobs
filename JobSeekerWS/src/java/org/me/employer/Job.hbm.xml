@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 29, 2014 12:27:09 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="org.me.employer.Job" table="job" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="position" class="org.me.employer.Position" fetch="select">
+            <column name="position_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="company" class="org.me.employer.Company" fetch="select">
+            <column name="company_id" not-null="true" />
+        </many-to-one>
+        <property name="jobCode" type="string">
+            <column name="job_code" length="32" not-null="true" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="12" not-null="true" />
+        </property>
+        <property name="payType" type="string">
+            <column name="pay_type" length="12" not-null="true" />
+        </property>
+        <property name="payRate" type="string">
+            <column name="pay_rate" length="12" not-null="true" />
+        </property>
+        <set name="applieses" table="applies" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="job_id" not-null="true" />
+            </key>
+            <one-to-many class="org.me.employer.Applies" />
+        </set>
+    </class>
+</hibernate-mapping>

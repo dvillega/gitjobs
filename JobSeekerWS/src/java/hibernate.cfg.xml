@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <!-- Database connection settings -->
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/va_skill_dist_system</property>
+    <property name="hibernate.connection.username">user12</property>
+    <property name="hibernate.connection.password">abc123</property>
+    <!-- SQL dialect - generate SQL for a particular database -->
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <!-- Echo all executed SQL statements -->
+    <property name="hibernate.show_sql">true</property>
+    <!-- Enable Hibernate's automatic session context management -->
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+    <!-- Mapping resource configuration files -->
+<!--    <mapping class="org.me.jobseeker.Person" file="" jar="" package="org.me.jobseeker" resource="org/me/jobseeker/Person.hbm.xml"/>
+    <mapping class="org.me.details.Address" file="" jar="" package="org.me.details" resource="org/me/details/Address.hbm.xml"/>
+    <mapping class="org.me.education.Section" file="" jar="" package="org.me.education" resource="org/me/education/Section.hbm.xml"/>
+    <mapping class="org.me.education.EducInstitute" file="" jar="" package="org.me.education" resource="org/me/education/EducInstitute.hbm.xml"/>
+    <mapping class="org.me.education.Takes" file="" jar="" package="org.me.education" resource="org/me/education/Takes.hbm.xml"/>
+    <mapping class="org.me.education.Course" file="" jar="" package="org.me.education" resource="org/me/education/Course.hbm.xml"/>
+    <mapping class="org.me.education.Certificate" file="" jar="" package="org.me.education" resource="org/me/education/Certificate.hbm.xml"/>
+    <mapping class="org.me.skill.KnowledgeSkill" file="" jar="" package="org.me.skill" resource="org/me/skill/KnowledgeSkill.hbm.xml"/>
+    <mapping class="org.me.employer.Applies" file="" jar="" package="org.me.employer" resource="org/me/employer/Applies.hbm.xml"/>
+    <mapping class="org.me.employer.Position" file="" jar="" package="org.me.employer" resource="org/me/employer/Position.hbm.xml"/>
+    <mapping class="org.me.employer.Job" file="" jar="" package="org.me.employer" resource="org/me/employer/Job.hbm.xml"/>
+    <mapping class="org.me.employer.Company" file="" jar="" package="org.me.employer" resource="org/me/employer/Company.hbm.xml"/>-->
+  </session-factory>
+</hibernate-configuration>

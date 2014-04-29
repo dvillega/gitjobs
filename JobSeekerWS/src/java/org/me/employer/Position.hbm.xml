@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 29, 2014 12:27:09 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="org.me.employer.Position" table="position" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="posCode" type="string">
+            <column name="pos_code" length="32" not-null="true" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="64" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="basePayType" type="string">
+            <column name="base_pay_type" length="12" not-null="true" />
+        </property>
+        <property name="basePay" type="big_decimal">
+            <column name="base_pay" precision="12" not-null="true" />
+        </property>
+        <set name="jobs" table="job" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="position_id" not-null="true" />
+            </key>
+            <one-to-many class="org.me.employer.Job" />
+        </set>
+        <set name="knowledgeSkills" table="position_req_skills" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="position_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="org.me.skill.KnowledgeSkill">
+                <column name="skill_id" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

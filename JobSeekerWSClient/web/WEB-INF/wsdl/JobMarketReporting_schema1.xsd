@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://employerServices.me.org/" xmlns:tns="http://employerServices.me.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="getMostDesiredCreds" type="tns:getMostDesiredCreds"/>
+
+  <xs:element name="getMostDesiredCredsResponse" type="tns:getMostDesiredCredsResponse"/>
+
+  <xs:complexType name="getMostDesiredCreds">
+    <xs:sequence>
+      <xs:element name="occupation" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMostDesiredCredsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

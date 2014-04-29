@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/Users/christianlevi/code/schoolwork/distributedSystems/gitDestributeSystems/gitjobs/JobSeekerWS/web/WEB-INF/wsdl/JobMarketReporting.wsdl" uri="src/conf/xml-resources/web-service-references/JobMarketReporting/wsdl/JobMarketReporting.wsdl"/>
+    <system systemId="file:/Users/christianlevi/code/schoolwork/distributedSystems/gitDestributeSystems/gitjobs/JobSeekerWS/web/WEB-INF/wsdl/JobMarketReporting_schema1.xsd" uri="src/conf/xml-resources/web-service-references/JobMarketReporting/wsdl/JobMarketReporting_schema1.xsd"/>
+</catalog>
