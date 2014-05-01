@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 1, 2014 1:30:59 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="org.me.details.Address" table="address" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="address1" type="string">
+            <column name="address_1" length="64" not-null="true" />
+        </property>
+        <property name="address2" type="string">
+            <column name="address_2" length="64" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="64" not-null="true" />
+        </property>
+        <property name="zip" type="string">
+            <column name="zip" length="12" not-null="true" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="32" not-null="true" />
+        </property>
+        <property name="county" type="string">
+            <column name="county" length="32" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" length="64" />
+        </property>
+        <set name="persons" table="person" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="address_id" />
+            </key>
+            <one-to-many class="org.me.jobseeker.Person" />
+        </set>
+        <set name="companies" table="company" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="address_id" />
+            </key>
+            <one-to-many class="org.me.employer.Company" />
+        </set>
+    </class>
+</hibernate-mapping>

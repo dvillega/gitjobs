@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 1, 2014 1:30:59 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="org.me.education.EducInstitute" table="educ_institute" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <set name="userProfiles" table="user_educ_map" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="educ_id" not-null="true" unique="true" />
+            </key>
+            <many-to-many entity-name="org.me.users.UserProfile">
+                <column name="user_id" not-null="true" unique="true" />
+            </many-to-many>
+        </set>
+        <set name="sections" table="offers_course" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="educ_institute_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="org.me.education.Section">
+                <column name="section_id" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

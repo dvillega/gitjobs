@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 1, 2014 1:30:59 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="org.me.users.UserProfile" table="user_profile" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="usr" type="string">
+            <column name="usr" not-null="true" />
+        </property>
+        <property name="psw" type="string">
+            <column name="psw" not-null="true" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" not-null="true" />
+        </property>
+        <set name="companies" table="user_company_map" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" unique="true" />
+            </key>
+            <many-to-many entity-name="org.me.employer.Company">
+                <column name="company_id" not-null="true" unique="true" />
+            </many-to-many>
+        </set>
+        <set name="persons" table="user_person_map" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="org.me.jobseeker.Person">
+                <column name="person_id" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="educInstitutes" table="user_educ_map" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" unique="true" />
+            </key>
+            <many-to-many entity-name="org.me.education.EducInstitute">
+                <column name="educ_id" not-null="true" unique="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

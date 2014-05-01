@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 1, 2014 1:30:59 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="org.me.employer.Applies" table="applies" schema="public">
+        <composite-id name="id" class="org.me.employer.AppliesId">
+            <key-property name="personId" type="int">
+                <column name="person_id" />
+            </key-property>
+            <key-property name="jobId" type="int">
+                <column name="job_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="job" class="org.me.employer.Job" update="false" insert="false" fetch="select">
+            <column name="job_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="person" class="org.me.jobseeker.Person" update="false" insert="false" fetch="select">
+            <column name="person_id" not-null="true" />
+        </many-to-one>
+        <property name="approved" type="boolean">
+            <column name="approved" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 1, 2014 1:30:59 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="org.me.jobseeker.Person" table="person" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="address" class="org.me.details.Address" fetch="select">
+            <column name="address_id" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="zipCode" type="string">
+            <column name="zip_code" length="12" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="64" />
+        </property>
+        <property name="gender" type="java.lang.Character">
+            <column name="gender" length="1" />
+        </property>
+        <set name="applieses" table="applies" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="person_id" not-null="true" />
+            </key>
+            <one-to-many class="org.me.employer.Applies" />
+        </set>
+        <set name="takeses" table="takes" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="person_id" not-null="true" />
+            </key>
+            <one-to-many class="org.me.education.Takes" />
+        </set>
+        <set name="userProfiles" table="user_person_map" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="person_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="org.me.users.UserProfile">
+                <column name="user_id" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>
