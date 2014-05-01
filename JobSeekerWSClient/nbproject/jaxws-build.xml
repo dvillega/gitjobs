@@ -28,8 +28,8 @@
     </target>
     <target name="wsimport-client-JobMarketReporting" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/JobMarketReporting"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/JobMarketReporting" destdir="${build.generated.dir}/jax-wsCache/JobMarketReporting" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/JobMarketReporting/wsdl/JobMarketReporting.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="file:/Users/christianlevi/code/schoolwork/distributedSystems/gitDestributeSystems/gitjobs/JobSeekerWS/web/WEB-INF/wsdl/JobMarketReporting.wsdl" xnocompile="true" xendorsed="true" package="org.me.jobSeekerServices">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/JobMarketReporting/wsdl/JobMarketReporting.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/JobMarketReporting" destdir="${build.generated.dir}/jax-wsCache/JobMarketReporting" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/JobMarketReporting/wsdl/localhost_8080/JobSeekerWS/JobMarketReporting.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/JobSeekerWS/JobMarketReporting?wsdl" xnocompile="true" xendorsed="true" package="org.me.jobMarketReporting">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/JobMarketReporting/wsdl/localhost_8080/JobSeekerWS/JobMarketReporting.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/JobMarketReporting"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
@@ -39,8 +39,24 @@
         </copy>
     </target>
     <target name="wsimport-client-clean-JobMarketReporting" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/org/me/jobSeekerServices"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/me/jobMarketReporting"/>
         <delete dir="${build.generated.dir}/jax-wsCache/JobMarketReporting"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-JobMarketReporting"/>
+    <target name="wsimport-client-JobSeekerManager" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/JobSeekerManager"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/JobSeekerManager" destdir="${build.generated.dir}/jax-wsCache/JobSeekerManager" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/JobSeekerManager/wsdl/localhost_8080/JobSeekerWS/JobSeekerManager.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/JobSeekerWS/JobSeekerManager?wsdl" xnocompile="true" xendorsed="true" package="org.me.jobSeekerManager">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/JobSeekerManager/wsdl/localhost_8080/JobSeekerWS/JobSeekerManager.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/JobSeekerManager"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/JobSeekerManager">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-JobSeekerManager" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/me/jobSeekerManager"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/JobSeekerManager"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-JobMarketReporting, wsimport-client-JobSeekerManager"/>
 </project>
