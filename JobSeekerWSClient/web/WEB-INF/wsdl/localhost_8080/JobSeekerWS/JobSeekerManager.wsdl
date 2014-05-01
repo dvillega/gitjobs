@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://jobSeekerServices.me.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="JobSeekerManager" targetNamespace="http://jobSeekerServices.me.org/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://jobSeekerServices.me.org/" elementFormDefault="unqualified" targetNamespace="http://jobSeekerServices.me.org/" version="1.0">
+
+  <xs:element name="applyToJob" type="tns:applyToJob"/>
+
+  <xs:element name="applyToJobResponse" type="tns:applyToJobResponse"/>
+
+  <xs:element name="checkPositionApplicants" type="tns:checkPositionApplicants"/>
+
+  <xs:element name="checkPositionApplicantsResponse" type="tns:checkPositionApplicantsResponse"/>
+
+  <xs:element name="findVetWithSkills" type="tns:findVetWithSkills"/>
+
+  <xs:element name="findVetWithSkillsResponse" type="tns:findVetWithSkillsResponse"/>
+
+  <xs:element name="getExpiredCredentials" type="tns:getExpiredCredentials"/>
+
+  <xs:element name="getExpiredCredentialsResponse" type="tns:getExpiredCredentialsResponse"/>
+
+  <xs:element name="getMissingSkills" type="tns:getMissingSkills"/>
+
+  <xs:element name="getMissingSkillsResponse" type="tns:getMissingSkillsResponse"/>
+
+  <xs:element name="getValidCredentials" type="tns:getValidCredentials"/>
+
+  <xs:element name="getValidCredentialsResponse" type="tns:getValidCredentialsResponse"/>
+
+  <xs:element name="offerPosition" type="tns:offerPosition"/>
+
+  <xs:element name="offerPositionResponse" type="tns:offerPositionResponse"/>
+
+  <xs:complexType name="offerPosition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="applicantID" type="xs:string"/>
+      <xs:element minOccurs="0" name="jobID" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="offerPositionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getValidCredentials">
+    <xs:sequence>
+      <xs:element name="jobSeekerId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getValidCredentialsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkPositionApplicants">
+    <xs:sequence>
+      <xs:element name="jobID" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkPositionApplicantsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMissingSkills">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="jobID" type="xs:string"/>
+      <xs:element minOccurs="0" name="vetSkillList" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMissingSkillsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="findVetWithSkills">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="skillList" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="findVetWithSkillsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="applyToJob">
+    <xs:sequence>
+      <xs:element name="jobSeekerID" type="xs:int"/>
+      <xs:element name="jobID" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="applyToJobResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getExpiredCredentials">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="jobSeekerID" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getExpiredCredentialsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="applyToJobResponse">
+    <wsdl:part element="tns:applyToJobResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="offerPositionResponse">
+    <wsdl:part element="tns:offerPositionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getExpiredCredentials">
+    <wsdl:part element="tns:getExpiredCredentials" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="offerPosition">
+    <wsdl:part element="tns:offerPosition" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMissingSkills">
+    <wsdl:part element="tns:getMissingSkills" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getExpiredCredentialsResponse">
+    <wsdl:part element="tns:getExpiredCredentialsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkPositionApplicantsResponse">
+    <wsdl:part element="tns:checkPositionApplicantsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMissingSkillsResponse">
+    <wsdl:part element="tns:getMissingSkillsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="applyToJob">
+    <wsdl:part element="tns:applyToJob" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findVetWithSkills">
+    <wsdl:part element="tns:findVetWithSkills" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getValidCredentials">
+    <wsdl:part element="tns:getValidCredentials" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findVetWithSkillsResponse">
+    <wsdl:part element="tns:findVetWithSkillsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getValidCredentialsResponse">
+    <wsdl:part element="tns:getValidCredentialsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkPositionApplicants">
+    <wsdl:part element="tns:checkPositionApplicants" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="JobSeekerManager">
+    <wsdl:operation name="offerPosition">
+      <wsdl:input message="tns:offerPosition" name="offerPosition">
+    </wsdl:input>
+      <wsdl:output message="tns:offerPositionResponse" name="offerPositionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getValidCredentials">
+      <wsdl:input message="tns:getValidCredentials" name="getValidCredentials">
+    </wsdl:input>
+      <wsdl:output message="tns:getValidCredentialsResponse" name="getValidCredentialsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkPositionApplicants">
+      <wsdl:input message="tns:checkPositionApplicants" name="checkPositionApplicants">
+    </wsdl:input>
+      <wsdl:output message="tns:checkPositionApplicantsResponse" name="checkPositionApplicantsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMissingSkills">
+      <wsdl:input message="tns:getMissingSkills" name="getMissingSkills">
+    </wsdl:input>
+      <wsdl:output message="tns:getMissingSkillsResponse" name="getMissingSkillsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findVetWithSkills">
+      <wsdl:input message="tns:findVetWithSkills" name="findVetWithSkills">
+    </wsdl:input>
+      <wsdl:output message="tns:findVetWithSkillsResponse" name="findVetWithSkillsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="applyToJob">
+      <wsdl:input message="tns:applyToJob" name="applyToJob">
+    </wsdl:input>
+      <wsdl:output message="tns:applyToJobResponse" name="applyToJobResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExpiredCredentials">
+      <wsdl:input message="tns:getExpiredCredentials" name="getExpiredCredentials">
+    </wsdl:input>
+      <wsdl:output message="tns:getExpiredCredentialsResponse" name="getExpiredCredentialsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="JobSeekerManagerSoapBinding" type="tns:JobSeekerManager">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="offerPosition">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="offerPosition">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="offerPositionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getValidCredentials">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getValidCredentials">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getValidCredentialsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkPositionApplicants">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="checkPositionApplicants">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="checkPositionApplicantsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMissingSkills">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getMissingSkills">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getMissingSkillsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findVetWithSkills">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findVetWithSkills">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findVetWithSkillsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="applyToJob">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="applyToJob">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="applyToJobResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExpiredCredentials">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getExpiredCredentials">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getExpiredCredentialsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JobSeekerManager">
+    <wsdl:port binding="tns:JobSeekerManagerSoapBinding" name="JobSeekerManagerPort">
+      <soap:address location="http://localhost:8080/JobSeekerWS/JobSeekerManager"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

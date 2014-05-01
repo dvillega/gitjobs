@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://jobSeekerServices.me.org/" xmlns:tns="http://jobSeekerServices.me.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="applyToJob" nillable="true" type="tns:applyToJob"/>
+
+  <xs:element name="applyToJobResponse" nillable="true" type="tns:applyToJobResponse"/>
+
+  <xs:element name="checkPositionApplicants" nillable="true" type="tns:checkPositionApplicants"/>
+
+  <xs:element name="checkPositionApplicantsResponse" nillable="true" type="tns:checkPositionApplicantsResponse"/>
+
+  <xs:element name="findVetWithSkills" nillable="true" type="tns:findVetWithSkills"/>
+
+  <xs:element name="findVetWithSkillsResponse" nillable="true" type="tns:findVetWithSkillsResponse"/>
+
+  <xs:element name="getExpiredCredentials" nillable="true" type="tns:getExpiredCredentials"/>
+
+  <xs:element name="getExpiredCredentialsResponse" nillable="true" type="tns:getExpiredCredentialsResponse"/>
+
+  <xs:element name="getMissingSkills" nillable="true" type="tns:getMissingSkills"/>
+
+  <xs:element name="getMissingSkillsResponse" nillable="true" type="tns:getMissingSkillsResponse"/>
+
+  <xs:element name="getValidCredentials" nillable="true" type="tns:getValidCredentials"/>
+
+  <xs:element name="getValidCredentialsResponse" nillable="true" type="tns:getValidCredentialsResponse"/>
+
+  <xs:element name="offerPosition" nillable="true" type="tns:offerPosition"/>
+
+  <xs:element name="offerPositionResponse" nillable="true" type="tns:offerPositionResponse"/>
+
+  <xs:complexType name="applyToJob">
+    <xs:sequence>
+      <xs:element name="jobID" type="xs:int"/>
+      <xs:element name="jobSeekerID" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="applyToJobResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getExpiredCredentials">
+    <xs:sequence>
+      <xs:element name="jobSeekerID" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getExpiredCredentialsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="offerPosition">
+    <xs:sequence>
+      <xs:element name="applicantID" type="xs:string" minOccurs="0"/>
+      <xs:element name="jobID" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="offerPositionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="findVetWithSkills">
+    <xs:sequence>
+      <xs:element name="skillList" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="findVetWithSkillsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getValidCredentials">
+    <xs:sequence>
+      <xs:element name="jobSeekerId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getValidCredentialsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMissingSkills">
+    <xs:sequence>
+      <xs:element name="jobID" type="xs:string" minOccurs="0"/>
+      <xs:element name="vetSkillList" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMissingSkillsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkPositionApplicants">
+    <xs:sequence>
+      <xs:element name="jobID" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkPositionApplicantsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
