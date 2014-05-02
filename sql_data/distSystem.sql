@@ -343,7 +343,8 @@ CREATE TABLE person (
     email character(64),
     gender character(1),
     id integer NOT NULL,
-    address_id integer
+    address_id integer,
+    veteran boolean
 );
 
 
