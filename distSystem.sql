@@ -302,7 +302,7 @@ ALTER SEQUENCE knowledge_skill_id_seq OWNED BY knowledge_skill.id;
 CREATE TABLE mos_code (
     mos character(32) NOT NULL,
     branch character(12) NOT NULL,
-    title character(64) NOT NULL,
+    title text NOT NULL,
     id integer NOT NULL
 );
 
