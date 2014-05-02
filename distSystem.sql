@@ -30,7 +30,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: address; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: address; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE address (
@@ -45,10 +45,10 @@ CREATE TABLE address (
 );
 
 
-ALTER TABLE public.address OWNER TO christianlevi;
+ALTER TABLE public.address OWNER TO distappz;
 
 --
--- Name: address_id_seq; Type: SEQUENCE; Schema: public; Owner: christianlevi
+-- Name: address_id_seq; Type: SEQUENCE; Schema: public; Owner: distappz
 --
 
 CREATE SEQUENCE address_id_seq
@@ -59,17 +59,17 @@ CREATE SEQUENCE address_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.address_id_seq OWNER TO christianlevi;
+ALTER TABLE public.address_id_seq OWNER TO distappz;
 
 --
--- Name: address_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: christianlevi
+-- Name: address_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: distappz
 --
 
 ALTER SEQUENCE address_id_seq OWNED BY address.id;
 
 
 --
--- Name: applies; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: applies; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE applies (
@@ -79,10 +79,10 @@ CREATE TABLE applies (
 );
 
 
-ALTER TABLE public.applies OWNER TO christianlevi;
+ALTER TABLE public.applies OWNER TO distappz;
 
 --
--- Name: certificate; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: certificate; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE certificate (
@@ -96,10 +96,10 @@ CREATE TABLE certificate (
 );
 
 
-ALTER TABLE public.certificate OWNER TO christianlevi;
+ALTER TABLE public.certificate OWNER TO distappz;
 
 --
--- Name: certificate_id_seq; Type: SEQUENCE; Schema: public; Owner: christianlevi
+-- Name: certificate_id_seq; Type: SEQUENCE; Schema: public; Owner: distappz
 --
 
 CREATE SEQUENCE certificate_id_seq
@@ -110,17 +110,17 @@ CREATE SEQUENCE certificate_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.certificate_id_seq OWNER TO christianlevi;
+ALTER TABLE public.certificate_id_seq OWNER TO distappz;
 
 --
--- Name: certificate_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: christianlevi
+-- Name: certificate_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: distappz
 --
 
 ALTER SEQUENCE certificate_id_seq OWNED BY certificate.id;
 
 
 --
--- Name: company; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: company; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE company (
@@ -131,10 +131,10 @@ CREATE TABLE company (
 );
 
 
-ALTER TABLE public.company OWNER TO christianlevi;
+ALTER TABLE public.company OWNER TO distappz;
 
 --
--- Name: company_id_seq; Type: SEQUENCE; Schema: public; Owner: christianlevi
+-- Name: company_id_seq; Type: SEQUENCE; Schema: public; Owner: distappz
 --
 
 CREATE SEQUENCE company_id_seq
@@ -145,17 +145,17 @@ CREATE SEQUENCE company_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.company_id_seq OWNER TO christianlevi;
+ALTER TABLE public.company_id_seq OWNER TO distappz;
 
 --
--- Name: company_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: christianlevi
+-- Name: company_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: distappz
 --
 
 ALTER SEQUENCE company_id_seq OWNED BY company.id;
 
 
 --
--- Name: course; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: course; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE course (
@@ -169,10 +169,10 @@ CREATE TABLE course (
 );
 
 
-ALTER TABLE public.course OWNER TO christianlevi;
+ALTER TABLE public.course OWNER TO distappz;
 
 --
--- Name: course_id_seq; Type: SEQUENCE; Schema: public; Owner: christianlevi
+-- Name: course_id_seq; Type: SEQUENCE; Schema: public; Owner: distappz
 --
 
 CREATE SEQUENCE course_id_seq
@@ -183,17 +183,17 @@ CREATE SEQUENCE course_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.course_id_seq OWNER TO christianlevi;
+ALTER TABLE public.course_id_seq OWNER TO distappz;
 
 --
--- Name: course_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: christianlevi
+-- Name: course_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: distappz
 --
 
 ALTER SEQUENCE course_id_seq OWNED BY course.id;
 
 
 --
--- Name: educ_institute; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: educ_institute; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE educ_institute (
@@ -202,10 +202,10 @@ CREATE TABLE educ_institute (
 );
 
 
-ALTER TABLE public.educ_institute OWNER TO christianlevi;
+ALTER TABLE public.educ_institute OWNER TO distappz;
 
 --
--- Name: educ_institute_id_seq; Type: SEQUENCE; Schema: public; Owner: christianlevi
+-- Name: educ_institute_id_seq; Type: SEQUENCE; Schema: public; Owner: distappz
 --
 
 CREATE SEQUENCE educ_institute_id_seq
@@ -216,17 +216,17 @@ CREATE SEQUENCE educ_institute_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.educ_institute_id_seq OWNER TO christianlevi;
+ALTER TABLE public.educ_institute_id_seq OWNER TO distappz;
 
 --
--- Name: educ_institute_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: christianlevi
+-- Name: educ_institute_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: distappz
 --
 
 ALTER SEQUENCE educ_institute_id_seq OWNED BY educ_institute.id;
 
 
 --
--- Name: job; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: job; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE job (
@@ -240,10 +240,10 @@ CREATE TABLE job (
 );
 
 
-ALTER TABLE public.job OWNER TO christianlevi;
+ALTER TABLE public.job OWNER TO distappz;
 
 --
--- Name: job_id_seq; Type: SEQUENCE; Schema: public; Owner: christianlevi
+-- Name: job_id_seq; Type: SEQUENCE; Schema: public; Owner: distappz
 --
 
 CREATE SEQUENCE job_id_seq
@@ -254,17 +254,17 @@ CREATE SEQUENCE job_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.job_id_seq OWNER TO christianlevi;
+ALTER TABLE public.job_id_seq OWNER TO distappz;
 
 --
--- Name: job_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: christianlevi
+-- Name: job_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: distappz
 --
 
 ALTER SEQUENCE job_id_seq OWNED BY job.id;
 
 
 --
--- Name: knowledge_skill; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: knowledge_skill; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE knowledge_skill (
@@ -276,10 +276,10 @@ CREATE TABLE knowledge_skill (
 );
 
 
-ALTER TABLE public.knowledge_skill OWNER TO christianlevi;
+ALTER TABLE public.knowledge_skill OWNER TO distappz;
 
 --
--- Name: knowledge_skill_id_seq; Type: SEQUENCE; Schema: public; Owner: christianlevi
+-- Name: knowledge_skill_id_seq; Type: SEQUENCE; Schema: public; Owner: distappz
 --
 
 CREATE SEQUENCE knowledge_skill_id_seq
@@ -290,17 +290,39 @@ CREATE SEQUENCE knowledge_skill_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.knowledge_skill_id_seq OWNER TO christianlevi;
+ALTER TABLE public.knowledge_skill_id_seq OWNER TO distappz;
 
 --
--- Name: knowledge_skill_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: christianlevi
+-- Name: knowledge_skill_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: distappz
 --
 
 ALTER SEQUENCE knowledge_skill_id_seq OWNED BY knowledge_skill.id;
 
+-- DEVIN ADDED
+CREATE TABLE mos_code (
+    mos character(32) NOT NULL,
+    branch character(12) NOT NULL,
+    title character(64) NOT NULL,
+    id integer NOT NULL
+);
+
+ALTER TABLE public.mos_code OWNER TO distappz;
+
+CREATE SEQUENCE mos_code_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+ALTER TABLE public.mos_code_id_seq OWNER TO distappz;
+
+ALTER SEQUENCE mos_code_id_seq OWNED BY mos_code.id;
+
+ALTER TABLE ONLY mos_code ALTER COLUMN id SET DEFAULT nextval('mos_code_id_seq'::regclass);
 
 --
--- Name: offers_course; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: offers_course; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE offers_course (
@@ -309,10 +331,10 @@ CREATE TABLE offers_course (
 );
 
 
-ALTER TABLE public.offers_course OWNER TO christianlevi;
+ALTER TABLE public.offers_course OWNER TO distappz;
 
 --
--- Name: person; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: person; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE person (
@@ -325,10 +347,10 @@ CREATE TABLE person (
 );
 
 
-ALTER TABLE public.person OWNER TO christianlevi;
+ALTER TABLE public.person OWNER TO distappz;
 
 --
--- Name: person_id_seq; Type: SEQUENCE; Schema: public; Owner: christianlevi
+-- Name: person_id_seq; Type: SEQUENCE; Schema: public; Owner: distappz
 --
 
 CREATE SEQUENCE person_id_seq
@@ -339,17 +361,17 @@ CREATE SEQUENCE person_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.person_id_seq OWNER TO christianlevi;
+ALTER TABLE public.person_id_seq OWNER TO distappz;
 
 --
--- Name: person_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: christianlevi
+-- Name: person_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: distappz
 --
 
 ALTER SEQUENCE person_id_seq OWNED BY person.id;
 
 
 --
--- Name: position; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: position; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE "position" (
@@ -362,10 +384,10 @@ CREATE TABLE "position" (
 );
 
 
-ALTER TABLE public."position" OWNER TO christianlevi;
+ALTER TABLE public."position" OWNER TO distappz;
 
 --
--- Name: position_id_seq; Type: SEQUENCE; Schema: public; Owner: christianlevi
+-- Name: position_id_seq; Type: SEQUENCE; Schema: public; Owner: distappz
 --
 
 CREATE SEQUENCE position_id_seq
@@ -376,17 +398,17 @@ CREATE SEQUENCE position_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.position_id_seq OWNER TO christianlevi;
+ALTER TABLE public.position_id_seq OWNER TO distappz;
 
 --
--- Name: position_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: christianlevi
+-- Name: position_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: distappz
 --
 
 ALTER SEQUENCE position_id_seq OWNED BY "position".id;
 
 
 --
--- Name: position_req_skills; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: position_req_skills; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE position_req_skills (
@@ -395,10 +417,10 @@ CREATE TABLE position_req_skills (
 );
 
 
-ALTER TABLE public.position_req_skills OWNER TO christianlevi;
+ALTER TABLE public.position_req_skills OWNER TO distappz;
 
 --
--- Name: section; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: section; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE section (
@@ -413,10 +435,10 @@ CREATE TABLE section (
 );
 
 
-ALTER TABLE public.section OWNER TO christianlevi;
+ALTER TABLE public.section OWNER TO distappz;
 
 --
--- Name: section_id_seq; Type: SEQUENCE; Schema: public; Owner: christianlevi
+-- Name: section_id_seq; Type: SEQUENCE; Schema: public; Owner: distappz
 --
 
 CREATE SEQUENCE section_id_seq
@@ -427,17 +449,17 @@ CREATE SEQUENCE section_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.section_id_seq OWNER TO christianlevi;
+ALTER TABLE public.section_id_seq OWNER TO distappz;
 
 --
--- Name: section_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: christianlevi
+-- Name: section_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: distappz
 --
 
 ALTER SEQUENCE section_id_seq OWNED BY section.id;
 
 
 --
--- Name: takes; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: takes; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE takes (
@@ -449,10 +471,10 @@ CREATE TABLE takes (
 );
 
 
-ALTER TABLE public.takes OWNER TO christianlevi;
+ALTER TABLE public.takes OWNER TO distappz;
 
 --
--- Name: user_company_map; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: user_company_map; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE user_company_map (
@@ -461,10 +483,10 @@ CREATE TABLE user_company_map (
 );
 
 
-ALTER TABLE public.user_company_map OWNER TO christianlevi;
+ALTER TABLE public.user_company_map OWNER TO distappz;
 
 --
--- Name: user_educ_map; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: user_educ_map; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE user_educ_map (
@@ -473,10 +495,10 @@ CREATE TABLE user_educ_map (
 );
 
 
-ALTER TABLE public.user_educ_map OWNER TO christianlevi;
+ALTER TABLE public.user_educ_map OWNER TO distappz;
 
 --
--- Name: user_person_map; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: user_person_map; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE user_person_map (
@@ -485,10 +507,10 @@ CREATE TABLE user_person_map (
 );
 
 
-ALTER TABLE public.user_person_map OWNER TO christianlevi;
+ALTER TABLE public.user_person_map OWNER TO distappz;
 
 --
--- Name: user_profile; Type: TABLE; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: user_profile; Type: TABLE; Schema: public; Owner: distappz; Tablespace: 
 --
 
 CREATE TABLE user_profile (
@@ -499,10 +521,10 @@ CREATE TABLE user_profile (
 );
 
 
-ALTER TABLE public.user_profile OWNER TO christianlevi;
+ALTER TABLE public.user_profile OWNER TO distappz;
 
 --
--- Name: user_profile_id_seq; Type: SEQUENCE; Schema: public; Owner: christianlevi
+-- Name: user_profile_id_seq; Type: SEQUENCE; Schema: public; Owner: distappz
 --
 
 CREATE SEQUENCE user_profile_id_seq
@@ -513,94 +535,94 @@ CREATE SEQUENCE user_profile_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.user_profile_id_seq OWNER TO christianlevi;
+ALTER TABLE public.user_profile_id_seq OWNER TO distappz;
 
 --
--- Name: user_profile_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: christianlevi
+-- Name: user_profile_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: distappz
 --
 
 ALTER SEQUENCE user_profile_id_seq OWNED BY user_profile.id;
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: christianlevi
+-- Name: id; Type: DEFAULT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY address ALTER COLUMN id SET DEFAULT nextval('address_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: christianlevi
+-- Name: id; Type: DEFAULT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY certificate ALTER COLUMN id SET DEFAULT nextval('certificate_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: christianlevi
+-- Name: id; Type: DEFAULT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY company ALTER COLUMN id SET DEFAULT nextval('company_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: christianlevi
+-- Name: id; Type: DEFAULT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY course ALTER COLUMN id SET DEFAULT nextval('course_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: christianlevi
+-- Name: id; Type: DEFAULT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY educ_institute ALTER COLUMN id SET DEFAULT nextval('educ_institute_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: christianlevi
+-- Name: id; Type: DEFAULT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY job ALTER COLUMN id SET DEFAULT nextval('job_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: christianlevi
+-- Name: id; Type: DEFAULT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY knowledge_skill ALTER COLUMN id SET DEFAULT nextval('knowledge_skill_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: christianlevi
+-- Name: id; Type: DEFAULT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY person ALTER COLUMN id SET DEFAULT nextval('person_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: christianlevi
+-- Name: id; Type: DEFAULT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY "position" ALTER COLUMN id SET DEFAULT nextval('position_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: christianlevi
+-- Name: id; Type: DEFAULT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY section ALTER COLUMN id SET DEFAULT nextval('section_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: christianlevi
+-- Name: id; Type: DEFAULT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY user_profile ALTER COLUMN id SET DEFAULT nextval('user_profile_id_seq'::regclass);
 
 
 --
--- Data for Name: address; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: address; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY address (address_1, address_2, city, zip, state, county, country, id) FROM stdin;
@@ -616,14 +638,14 @@ COPY address (address_1, address_2, city, zip, state, county, country, id) FROM 
 
 
 --
--- Name: address_id_seq; Type: SEQUENCE SET; Schema: public; Owner: christianlevi
+-- Name: address_id_seq; Type: SEQUENCE SET; Schema: public; Owner: distappz
 --
 
 SELECT pg_catalog.setval('address_id_seq', 7, true);
 
 
 --
--- Data for Name: applies; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: applies; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY applies (person_id, approved, job_id) FROM stdin;
@@ -631,7 +653,7 @@ COPY applies (person_id, approved, job_id) FROM stdin;
 
 
 --
--- Data for Name: certificate; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: certificate; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY certificate (cer_code, title, description, expire_date, issued_by, t_code, id) FROM stdin;
@@ -639,14 +661,14 @@ COPY certificate (cer_code, title, description, expire_date, issued_by, t_code, 
 
 
 --
--- Name: certificate_id_seq; Type: SEQUENCE SET; Schema: public; Owner: christianlevi
+-- Name: certificate_id_seq; Type: SEQUENCE SET; Schema: public; Owner: distappz
 --
 
 SELECT pg_catalog.setval('certificate_id_seq', 1, false);
 
 
 --
--- Data for Name: company; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: company; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY company (name, email, address_id, id) FROM stdin;
@@ -661,14 +683,14 @@ Too Industries	too@legit.com                                                   	
 
 
 --
--- Name: company_id_seq; Type: SEQUENCE SET; Schema: public; Owner: christianlevi
+-- Name: company_id_seq; Type: SEQUENCE SET; Schema: public; Owner: distappz
 --
 
 SELECT pg_catalog.setval('company_id_seq', 8, true);
 
 
 --
--- Data for Name: course; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: course; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY course (title, level, format, description, status, c_code, id) FROM stdin;
@@ -676,14 +698,14 @@ COPY course (title, level, format, description, status, c_code, id) FROM stdin;
 
 
 --
--- Name: course_id_seq; Type: SEQUENCE SET; Schema: public; Owner: christianlevi
+-- Name: course_id_seq; Type: SEQUENCE SET; Schema: public; Owner: distappz
 --
 
 SELECT pg_catalog.setval('course_id_seq', 1, false);
 
 
 --
--- Data for Name: educ_institute; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: educ_institute; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY educ_institute (name, id) FROM stdin;
@@ -691,14 +713,14 @@ COPY educ_institute (name, id) FROM stdin;
 
 
 --
--- Name: educ_institute_id_seq; Type: SEQUENCE SET; Schema: public; Owner: christianlevi
+-- Name: educ_institute_id_seq; Type: SEQUENCE SET; Schema: public; Owner: distappz
 --
 
 SELECT pg_catalog.setval('educ_institute_id_seq', 1, false);
 
 
 --
--- Data for Name: job; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: job; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY job (job_code, type, pay_type, pay_rate, company_id, id, position_id) FROM stdin;
@@ -706,14 +728,14 @@ COPY job (job_code, type, pay_type, pay_rate, company_id, id, position_id) FROM 
 
 
 --
--- Name: job_id_seq; Type: SEQUENCE SET; Schema: public; Owner: christianlevi
+-- Name: job_id_seq; Type: SEQUENCE SET; Schema: public; Owner: distappz
 --
 
 SELECT pg_catalog.setval('job_id_seq', 1, false);
 
 
 --
--- Data for Name: knowledge_skill; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: knowledge_skill; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY knowledge_skill (ks_code, title, description, level, id) FROM stdin;
@@ -721,14 +743,14 @@ COPY knowledge_skill (ks_code, title, description, level, id) FROM stdin;
 
 
 --
--- Name: knowledge_skill_id_seq; Type: SEQUENCE SET; Schema: public; Owner: christianlevi
+-- Name: knowledge_skill_id_seq; Type: SEQUENCE SET; Schema: public; Owner: distappz
 --
 
 SELECT pg_catalog.setval('knowledge_skill_id_seq', 1, false);
 
 
 --
--- Data for Name: offers_course; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: offers_course; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY offers_course (educ_institute_id, section_id) FROM stdin;
@@ -736,7 +758,7 @@ COPY offers_course (educ_institute_id, section_id) FROM stdin;
 
 
 --
--- Data for Name: person; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: person; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY person (name, zip_code, email, gender, id, address_id) FROM stdin;
@@ -747,14 +769,14 @@ Testing Guy1	70001       	number1Stunta@gmail.com                               
 
 
 --
--- Name: person_id_seq; Type: SEQUENCE SET; Schema: public; Owner: christianlevi
+-- Name: person_id_seq; Type: SEQUENCE SET; Schema: public; Owner: distappz
 --
 
 SELECT pg_catalog.setval('person_id_seq', 20, true);
 
 
 --
--- Data for Name: position; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: position; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY "position" (pos_code, title, description, base_pay_type, base_pay, id) FROM stdin;
@@ -762,14 +784,14 @@ COPY "position" (pos_code, title, description, base_pay_type, base_pay, id) FROM
 
 
 --
--- Name: position_id_seq; Type: SEQUENCE SET; Schema: public; Owner: christianlevi
+-- Name: position_id_seq; Type: SEQUENCE SET; Schema: public; Owner: distappz
 --
 
 SELECT pg_catalog.setval('position_id_seq', 1, false);
 
 
 --
--- Data for Name: position_req_skills; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: position_req_skills; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY position_req_skills (skill_id, position_id) FROM stdin;
@@ -777,7 +799,7 @@ COPY position_req_skills (skill_id, position_id) FROM stdin;
 
 
 --
--- Data for Name: section; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: section; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY section (course_id, start_date, end_date, format, offered_by, cost, status, id) FROM stdin;
@@ -785,14 +807,14 @@ COPY section (course_id, start_date, end_date, format, offered_by, cost, status,
 
 
 --
--- Name: section_id_seq; Type: SEQUENCE SET; Schema: public; Owner: christianlevi
+-- Name: section_id_seq; Type: SEQUENCE SET; Schema: public; Owner: distappz
 --
 
 SELECT pg_catalog.setval('section_id_seq', 1, false);
 
 
 --
--- Data for Name: takes; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: takes; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY takes (person_id, paid, grade, course_id, section_id) FROM stdin;
@@ -800,7 +822,7 @@ COPY takes (person_id, paid, grade, course_id, section_id) FROM stdin;
 
 
 --
--- Data for Name: user_company_map; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: user_company_map; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY user_company_map (user_id, company_id) FROM stdin;
@@ -808,7 +830,7 @@ COPY user_company_map (user_id, company_id) FROM stdin;
 
 
 --
--- Data for Name: user_educ_map; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: user_educ_map; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY user_educ_map (user_id, educ_id) FROM stdin;
@@ -816,7 +838,7 @@ COPY user_educ_map (user_id, educ_id) FROM stdin;
 
 
 --
--- Data for Name: user_person_map; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: user_person_map; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY user_person_map (person_id, user_id) FROM stdin;
@@ -824,7 +846,7 @@ COPY user_person_map (person_id, user_id) FROM stdin;
 
 
 --
--- Data for Name: user_profile; Type: TABLE DATA; Schema: public; Owner: christianlevi
+-- Data for Name: user_profile; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
 COPY user_profile (id, usr, psw, type) FROM stdin;
@@ -832,14 +854,14 @@ COPY user_profile (id, usr, psw, type) FROM stdin;
 
 
 --
--- Name: user_profile_id_seq; Type: SEQUENCE SET; Schema: public; Owner: christianlevi
+-- Name: user_profile_id_seq; Type: SEQUENCE SET; Schema: public; Owner: distappz
 --
 
 SELECT pg_catalog.setval('user_profile_id_seq', 1, false);
 
 
 --
--- Name: address_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: address_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY address
@@ -847,7 +869,7 @@ ALTER TABLE ONLY address
 
 
 --
--- Name: applies_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: applies_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY applies
@@ -855,7 +877,7 @@ ALTER TABLE ONLY applies
 
 
 --
--- Name: certificate_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: certificate_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY certificate
@@ -863,7 +885,7 @@ ALTER TABLE ONLY certificate
 
 
 --
--- Name: company_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: company_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY company
@@ -871,7 +893,7 @@ ALTER TABLE ONLY company
 
 
 --
--- Name: course_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: course_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY course
@@ -879,7 +901,7 @@ ALTER TABLE ONLY course
 
 
 --
--- Name: educ_institute_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: educ_institute_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY educ_institute
@@ -887,7 +909,7 @@ ALTER TABLE ONLY educ_institute
 
 
 --
--- Name: job_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: job_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY job
@@ -895,7 +917,7 @@ ALTER TABLE ONLY job
 
 
 --
--- Name: knowledge_skill_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: knowledge_skill_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY knowledge_skill
@@ -903,7 +925,7 @@ ALTER TABLE ONLY knowledge_skill
 
 
 --
--- Name: offers_course_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: offers_course_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY offers_course
@@ -911,7 +933,7 @@ ALTER TABLE ONLY offers_course
 
 
 --
--- Name: person_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: person_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY person
@@ -919,7 +941,7 @@ ALTER TABLE ONLY person
 
 
 --
--- Name: position_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: position_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY "position"
@@ -927,7 +949,7 @@ ALTER TABLE ONLY "position"
 
 
 --
--- Name: position_req_skills_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: position_req_skills_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY position_req_skills
@@ -935,7 +957,7 @@ ALTER TABLE ONLY position_req_skills
 
 
 --
--- Name: section_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: section_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY section
@@ -943,7 +965,7 @@ ALTER TABLE ONLY section
 
 
 --
--- Name: takes_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: takes_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY takes
@@ -951,7 +973,7 @@ ALTER TABLE ONLY takes
 
 
 --
--- Name: user_company_map_company_id_key; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: user_company_map_company_id_key; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY user_company_map
@@ -959,7 +981,7 @@ ALTER TABLE ONLY user_company_map
 
 
 --
--- Name: user_company_map_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: user_company_map_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY user_company_map
@@ -967,7 +989,7 @@ ALTER TABLE ONLY user_company_map
 
 
 --
--- Name: user_company_map_user_id_key; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: user_company_map_user_id_key; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY user_company_map
@@ -975,7 +997,7 @@ ALTER TABLE ONLY user_company_map
 
 
 --
--- Name: user_educ_map_educ_id_key; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: user_educ_map_educ_id_key; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY user_educ_map
@@ -983,7 +1005,7 @@ ALTER TABLE ONLY user_educ_map
 
 
 --
--- Name: user_educ_map_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: user_educ_map_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY user_educ_map
@@ -991,7 +1013,7 @@ ALTER TABLE ONLY user_educ_map
 
 
 --
--- Name: user_educ_map_user_id_key; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: user_educ_map_user_id_key; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY user_educ_map
@@ -999,7 +1021,7 @@ ALTER TABLE ONLY user_educ_map
 
 
 --
--- Name: user_person_map_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: user_person_map_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY user_person_map
@@ -1007,7 +1029,7 @@ ALTER TABLE ONLY user_person_map
 
 
 --
--- Name: user_profile_pkey; Type: CONSTRAINT; Schema: public; Owner: christianlevi; Tablespace: 
+-- Name: user_profile_pkey; Type: CONSTRAINT; Schema: public; Owner: distappz; Tablespace: 
 --
 
 ALTER TABLE ONLY user_profile
@@ -1015,7 +1037,7 @@ ALTER TABLE ONLY user_profile
 
 
 --
--- Name: applies_job_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: applies_job_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY applies
@@ -1023,7 +1045,7 @@ ALTER TABLE ONLY applies
 
 
 --
--- Name: applies_person_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: applies_person_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY applies
@@ -1031,7 +1053,7 @@ ALTER TABLE ONLY applies
 
 
 --
--- Name: company_address_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: company_address_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY company
@@ -1039,7 +1061,7 @@ ALTER TABLE ONLY company
 
 
 --
--- Name: job_company_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: job_company_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY job
@@ -1047,7 +1069,7 @@ ALTER TABLE ONLY job
 
 
 --
--- Name: job_position_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: job_position_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY job
@@ -1055,7 +1077,7 @@ ALTER TABLE ONLY job
 
 
 --
--- Name: offers_course_educ_institute_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: offers_course_educ_institute_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY offers_course
@@ -1063,7 +1085,7 @@ ALTER TABLE ONLY offers_course
 
 
 --
--- Name: offers_course_section_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: offers_course_section_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY offers_course
@@ -1071,7 +1093,7 @@ ALTER TABLE ONLY offers_course
 
 
 --
--- Name: person_address_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: person_address_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY person
@@ -1079,7 +1101,7 @@ ALTER TABLE ONLY person
 
 
 --
--- Name: position_req_skills_position_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: position_req_skills_position_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY position_req_skills
@@ -1087,7 +1109,7 @@ ALTER TABLE ONLY position_req_skills
 
 
 --
--- Name: position_req_skills_skill_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: position_req_skills_skill_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY position_req_skills
@@ -1095,7 +1117,7 @@ ALTER TABLE ONLY position_req_skills
 
 
 --
--- Name: takes_course_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: takes_course_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY takes
@@ -1103,7 +1125,7 @@ ALTER TABLE ONLY takes
 
 
 --
--- Name: takes_person_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: takes_person_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY takes
@@ -1111,7 +1133,7 @@ ALTER TABLE ONLY takes
 
 
 --
--- Name: takes_section_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: takes_section_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY takes
@@ -1119,7 +1141,7 @@ ALTER TABLE ONLY takes
 
 
 --
--- Name: user_company_map_company_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: user_company_map_company_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY user_company_map
@@ -1127,7 +1149,7 @@ ALTER TABLE ONLY user_company_map
 
 
 --
--- Name: user_company_map_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: user_company_map_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY user_company_map
@@ -1135,7 +1157,7 @@ ALTER TABLE ONLY user_company_map
 
 
 --
--- Name: user_educ_map_educ_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: user_educ_map_educ_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY user_educ_map
@@ -1143,7 +1165,7 @@ ALTER TABLE ONLY user_educ_map
 
 
 --
--- Name: user_educ_map_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: user_educ_map_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY user_educ_map
@@ -1151,7 +1173,7 @@ ALTER TABLE ONLY user_educ_map
 
 
 --
--- Name: user_person_map_person_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: user_person_map_person_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY user_person_map
@@ -1159,7 +1181,7 @@ ALTER TABLE ONLY user_person_map
 
 
 --
--- Name: user_person_map_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: christianlevi
+-- Name: user_person_map_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: distappz
 --
 
 ALTER TABLE ONLY user_person_map
@@ -1167,253 +1189,229 @@ ALTER TABLE ONLY user_person_map
 
 
 --
--- Name: public; Type: ACL; Schema: -; Owner: christianlevi
+-- Name: public; Type: ACL; Schema: -; Owner: distappz
 --
 
 REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM christianlevi;
-GRANT ALL ON SCHEMA public TO christianlevi;
+REVOKE ALL ON SCHEMA public FROM distappz;
+GRANT ALL ON SCHEMA public TO distappz;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
 --
--- Name: address; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: address; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON TABLE address FROM PUBLIC;
-REVOKE ALL ON TABLE address FROM christianlevi;
-GRANT ALL ON TABLE address TO christianlevi;
-GRANT ALL ON TABLE address TO user12;
+REVOKE ALL ON TABLE address FROM distappz;
+GRANT ALL ON TABLE address TO distappz;
 
 
 --
--- Name: address_id_seq; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: address_id_seq; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON SEQUENCE address_id_seq FROM PUBLIC;
-REVOKE ALL ON SEQUENCE address_id_seq FROM christianlevi;
-GRANT ALL ON SEQUENCE address_id_seq TO christianlevi;
-GRANT ALL ON SEQUENCE address_id_seq TO user12;
+REVOKE ALL ON SEQUENCE address_id_seq FROM distappz;
+GRANT ALL ON SEQUENCE address_id_seq TO distappz;
 
 
 --
--- Name: applies; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: applies; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON TABLE applies FROM PUBLIC;
-REVOKE ALL ON TABLE applies FROM christianlevi;
-GRANT ALL ON TABLE applies TO christianlevi;
-GRANT ALL ON TABLE applies TO user12;
+REVOKE ALL ON TABLE applies FROM distappz;
+GRANT ALL ON TABLE applies TO distappz;
 
 
 --
--- Name: certificate; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: certificate; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON TABLE certificate FROM PUBLIC;
-REVOKE ALL ON TABLE certificate FROM christianlevi;
-GRANT ALL ON TABLE certificate TO christianlevi;
-GRANT ALL ON TABLE certificate TO user12;
+REVOKE ALL ON TABLE certificate FROM distappz;
+GRANT ALL ON TABLE certificate TO distappz;
 
 
 --
--- Name: certificate_id_seq; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: certificate_id_seq; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON SEQUENCE certificate_id_seq FROM PUBLIC;
-REVOKE ALL ON SEQUENCE certificate_id_seq FROM christianlevi;
-GRANT ALL ON SEQUENCE certificate_id_seq TO christianlevi;
-GRANT ALL ON SEQUENCE certificate_id_seq TO user12;
+REVOKE ALL ON SEQUENCE certificate_id_seq FROM distappz;
+GRANT ALL ON SEQUENCE certificate_id_seq TO distappz;
 
 
 --
--- Name: company; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: company; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON TABLE company FROM PUBLIC;
-REVOKE ALL ON TABLE company FROM christianlevi;
-GRANT ALL ON TABLE company TO christianlevi;
-GRANT ALL ON TABLE company TO user12;
+REVOKE ALL ON TABLE company FROM distappz;
+GRANT ALL ON TABLE company TO distappz;
 
 
 --
--- Name: company_id_seq; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: company_id_seq; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON SEQUENCE company_id_seq FROM PUBLIC;
-REVOKE ALL ON SEQUENCE company_id_seq FROM christianlevi;
-GRANT ALL ON SEQUENCE company_id_seq TO christianlevi;
-GRANT ALL ON SEQUENCE company_id_seq TO user12;
+REVOKE ALL ON SEQUENCE company_id_seq FROM distappz;
+GRANT ALL ON SEQUENCE company_id_seq TO distappz;
 
 
 --
--- Name: course; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: course; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON TABLE course FROM PUBLIC;
-REVOKE ALL ON TABLE course FROM christianlevi;
-GRANT ALL ON TABLE course TO christianlevi;
-GRANT ALL ON TABLE course TO user12;
+REVOKE ALL ON TABLE course FROM distappz;
+GRANT ALL ON TABLE course TO distappz;
 
 
 --
--- Name: course_id_seq; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: course_id_seq; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON SEQUENCE course_id_seq FROM PUBLIC;
-REVOKE ALL ON SEQUENCE course_id_seq FROM christianlevi;
-GRANT ALL ON SEQUENCE course_id_seq TO christianlevi;
-GRANT ALL ON SEQUENCE course_id_seq TO user12;
+REVOKE ALL ON SEQUENCE course_id_seq FROM distappz;
+GRANT ALL ON SEQUENCE course_id_seq TO distappz;
 
 
 --
--- Name: educ_institute; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: educ_institute; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON TABLE educ_institute FROM PUBLIC;
-REVOKE ALL ON TABLE educ_institute FROM christianlevi;
-GRANT ALL ON TABLE educ_institute TO christianlevi;
-GRANT ALL ON TABLE educ_institute TO user12;
+REVOKE ALL ON TABLE educ_institute FROM distappz;
+GRANT ALL ON TABLE educ_institute TO distappz;
 
 
 --
--- Name: educ_institute_id_seq; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: educ_institute_id_seq; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON SEQUENCE educ_institute_id_seq FROM PUBLIC;
-REVOKE ALL ON SEQUENCE educ_institute_id_seq FROM christianlevi;
-GRANT ALL ON SEQUENCE educ_institute_id_seq TO christianlevi;
-GRANT ALL ON SEQUENCE educ_institute_id_seq TO user12;
+REVOKE ALL ON SEQUENCE educ_institute_id_seq FROM distappz;
+GRANT ALL ON SEQUENCE educ_institute_id_seq TO distappz;
 
 
 --
--- Name: job; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: job; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON TABLE job FROM PUBLIC;
-REVOKE ALL ON TABLE job FROM christianlevi;
-GRANT ALL ON TABLE job TO christianlevi;
-GRANT ALL ON TABLE job TO user12;
+REVOKE ALL ON TABLE job FROM distappz;
+GRANT ALL ON TABLE job TO distappz;
 
 
 --
--- Name: job_id_seq; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: job_id_seq; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON SEQUENCE job_id_seq FROM PUBLIC;
-REVOKE ALL ON SEQUENCE job_id_seq FROM christianlevi;
-GRANT ALL ON SEQUENCE job_id_seq TO christianlevi;
-GRANT ALL ON SEQUENCE job_id_seq TO user12;
+REVOKE ALL ON SEQUENCE job_id_seq FROM distappz;
+GRANT ALL ON SEQUENCE job_id_seq TO distappz;
 
 
 --
--- Name: knowledge_skill; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: knowledge_skill; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON TABLE knowledge_skill FROM PUBLIC;
-REVOKE ALL ON TABLE knowledge_skill FROM christianlevi;
-GRANT ALL ON TABLE knowledge_skill TO christianlevi;
-GRANT ALL ON TABLE knowledge_skill TO user12;
+REVOKE ALL ON TABLE knowledge_skill FROM distappz;
+GRANT ALL ON TABLE knowledge_skill TO distappz;
 
 
 --
--- Name: knowledge_skill_id_seq; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: knowledge_skill_id_seq; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON SEQUENCE knowledge_skill_id_seq FROM PUBLIC;
-REVOKE ALL ON SEQUENCE knowledge_skill_id_seq FROM christianlevi;
-GRANT ALL ON SEQUENCE knowledge_skill_id_seq TO christianlevi;
-GRANT ALL ON SEQUENCE knowledge_skill_id_seq TO user12;
+REVOKE ALL ON SEQUENCE knowledge_skill_id_seq FROM distappz;
+GRANT ALL ON SEQUENCE knowledge_skill_id_seq TO distappz;
 
 
 --
--- Name: offers_course; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: offers_course; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON TABLE offers_course FROM PUBLIC;
-REVOKE ALL ON TABLE offers_course FROM christianlevi;
-GRANT ALL ON TABLE offers_course TO christianlevi;
-GRANT ALL ON TABLE offers_course TO user12;
+REVOKE ALL ON TABLE offers_course FROM distappz;
+GRANT ALL ON TABLE offers_course TO distappz;
 
 
 --
--- Name: person; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: person; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON TABLE person FROM PUBLIC;
-REVOKE ALL ON TABLE person FROM christianlevi;
-GRANT ALL ON TABLE person TO christianlevi;
-GRANT ALL ON TABLE person TO user12;
+REVOKE ALL ON TABLE person FROM distappz;
+GRANT ALL ON TABLE person TO distappz;
 
 
 --
--- Name: person_id_seq; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: person_id_seq; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON SEQUENCE person_id_seq FROM PUBLIC;
-REVOKE ALL ON SEQUENCE person_id_seq FROM christianlevi;
-GRANT ALL ON SEQUENCE person_id_seq TO christianlevi;
-GRANT ALL ON SEQUENCE person_id_seq TO user12;
+REVOKE ALL ON SEQUENCE person_id_seq FROM distappz;
+GRANT ALL ON SEQUENCE person_id_seq TO distappz;
 
 
 --
--- Name: position; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: position; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON TABLE "position" FROM PUBLIC;
-REVOKE ALL ON TABLE "position" FROM christianlevi;
-GRANT ALL ON TABLE "position" TO christianlevi;
-GRANT ALL ON TABLE "position" TO user12;
+REVOKE ALL ON TABLE "position" FROM distappz;
+GRANT ALL ON TABLE "position" TO distappz;
 
 
 --
--- Name: position_id_seq; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: position_id_seq; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON SEQUENCE position_id_seq FROM PUBLIC;
-REVOKE ALL ON SEQUENCE position_id_seq FROM christianlevi;
-GRANT ALL ON SEQUENCE position_id_seq TO christianlevi;
-GRANT ALL ON SEQUENCE position_id_seq TO user12;
+REVOKE ALL ON SEQUENCE position_id_seq FROM distappz;
+GRANT ALL ON SEQUENCE position_id_seq TO distappz;
 
 
 --
--- Name: position_req_skills; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: position_req_skills; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON TABLE position_req_skills FROM PUBLIC;
-REVOKE ALL ON TABLE position_req_skills FROM christianlevi;
-GRANT ALL ON TABLE position_req_skills TO christianlevi;
-GRANT ALL ON TABLE position_req_skills TO user12;
+REVOKE ALL ON TABLE position_req_skills FROM distappz;
+GRANT ALL ON TABLE position_req_skills TO distappz;
 
 
 --
--- Name: section; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: section; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON TABLE section FROM PUBLIC;
-REVOKE ALL ON TABLE section FROM christianlevi;
-GRANT ALL ON TABLE section TO christianlevi;
-GRANT ALL ON TABLE section TO user12;
+REVOKE ALL ON TABLE section FROM distappz;
+GRANT ALL ON TABLE section TO distappz;
 
 
 --
--- Name: section_id_seq; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: section_id_seq; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON SEQUENCE section_id_seq FROM PUBLIC;
-REVOKE ALL ON SEQUENCE section_id_seq FROM christianlevi;
-GRANT ALL ON SEQUENCE section_id_seq TO christianlevi;
-GRANT ALL ON SEQUENCE section_id_seq TO user12;
+REVOKE ALL ON SEQUENCE section_id_seq FROM distappz;
+GRANT ALL ON SEQUENCE section_id_seq TO distappz;
 
 
 --
--- Name: takes; Type: ACL; Schema: public; Owner: christianlevi
+-- Name: takes; Type: ACL; Schema: public; Owner: distappz
 --
 
 REVOKE ALL ON TABLE takes FROM PUBLIC;
-REVOKE ALL ON TABLE takes FROM christianlevi;
-GRANT ALL ON TABLE takes TO christianlevi;
-GRANT ALL ON TABLE takes TO user12;
+REVOKE ALL ON TABLE takes FROM distappz;
+GRANT ALL ON TABLE takes TO distappz;
 
 
 --
