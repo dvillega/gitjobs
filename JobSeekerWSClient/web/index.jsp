@@ -14,6 +14,7 @@
     <body>
         <h1>Welcome to Job Seeker</h1>
         <hr>
+        <a href="./Translator/serviceList.jsp">Skill Translation</a><br/>
         <a href="./MarketReporting/serviceList.jsp">Job Market Reporting</a><br/>
         <a href="./JSManager/serviceList.jsp">Job Seeker Manager</a><br/>
     </body>

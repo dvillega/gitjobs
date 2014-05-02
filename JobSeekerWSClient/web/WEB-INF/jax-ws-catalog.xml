@@ -5,4 +5,5 @@
     <system systemId="http://localhost:8080/JobSeekerWS/JobSeekerManager?wsdl" uri="wsdl/localhost_8080/JobSeekerWS/JobSeekerManager.wsdl"/>
     <system systemId="http://localhost:8080/JobSeekerWS/JobMarketReporting?wsdl" uri="wsdl/localhost_8080/JobSeekerWS/JobMarketReporting.wsdl"/>
     <system systemId="http://137.30.123.173:8080/JobSeekerWS/JobMarketReporting?wsdl" uri="wsdl/137.30.123.173_8080/JobSeekerWS/JobMarketReporting.wsdl"/>
+    <system systemId="http://137.30.123.173:8080/JobSeekerWS/JobSeekerManager?wsdl" uri="wsdl/137.30.123.173_8080/JobSeekerWS/JobSeekerManager.wsdl"/>
 </catalog>
