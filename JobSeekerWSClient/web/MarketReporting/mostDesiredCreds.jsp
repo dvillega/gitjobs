@@ -50,7 +50,8 @@
         out.println(ex.toString());
         ex.printStackTrace();
     }finally{
-        s.close();
+        if(s != null)
+            s.close();
         
     }
     %>
