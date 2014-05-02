@@ -15,6 +15,21 @@
         <servlet-class>org.me.translation.MilitaryTranslation</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>EducationServices</servlet-name>
+        <servlet-class>org.me.educationServices.EducationServices</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>EmployerManager</servlet-name>
+        <servlet-class>org.me.employerManager.EmployerManager</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>VAAgencyManager</servlet-name>
+        <servlet-class>org.me.vaAgencyManager.VAAgencyManager</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
     <servlet-mapping>
         <servlet-name>JobMarketReporting</servlet-name>
         <url-pattern>/JobMarketReporting</url-pattern>
@@ -26,6 +41,18 @@
     <servlet-mapping>
         <servlet-name>MilitaryTranslation</servlet-name>
         <url-pattern>/MilitaryTranslation</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EducationServices</servlet-name>
+        <url-pattern>/EducationServices</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EmployerManager</servlet-name>
+        <url-pattern>/EmployerManager</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VAAgencyManager</servlet-name>
+        <url-pattern>/VAAgencyManager</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

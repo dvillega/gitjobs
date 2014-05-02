@@ -6,4 +6,5 @@
     <system systemId="http://localhost:8080/JobSeekerWS/JobSeekerManager?wsdl" uri="src/conf/xml-resources/web-service-references/JobSeekerManager/wsdl/localhost_8080/JobSeekerWS/JobSeekerManager.wsdl"/>
     <system systemId="http://137.30.123.173:8080/JobSeekerWS/JobMarketReporting?wsdl" uri="src/conf/xml-resources/web-service-references/JobMarketReporting/wsdl/137.30.123.173_8080/JobSeekerWS/JobMarketReporting.wsdl"/>
     <system systemId="http://137.30.123.173:8080/JobSeekerWS/JobSeekerManager?wsdl" uri="src/conf/xml-resources/web-service-references/JobSeekerManager/wsdl/137.30.123.173_8080/JobSeekerWS/JobSeekerManager.wsdl"/>
+    <system systemId="http://137.30.123.173:8080/JobSeekerWS/MilitaryTranslation?wsdl" uri="src/conf/xml-resources/web-service-references/MilitaryTranslation/wsdl/137.30.123.173_8080/JobSeekerWS/MilitaryTranslation.wsdl"/>
 </catalog>

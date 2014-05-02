@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 29, 2014 12:27:09 AM by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="org.me.lookups.MOS_CIV_LK" table="MOS_CIV_LK" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="mos_code" type="int">
+            <column name="mos_code" not-null="true" />
+        </property>
+        <property name="civ_code" type="int">
+            <column name="civ_code" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

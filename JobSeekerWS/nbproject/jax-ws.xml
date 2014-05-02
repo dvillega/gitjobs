@@ -10,6 +10,15 @@
     <service name="MilitaryTranslation">
       <implementation-class>org.me.translation.MilitaryTranslation</implementation-class>
     </service>
+    <service name="EducationServices">
+      <implementation-class>org.me.educationServices.EducationServices</implementation-class>
+    </service>
+    <service name="EmployerManager">
+      <implementation-class>org.me.employerManager.EmployerManager</implementation-class>
+    </service>
+    <service name="VAAgencyManager">
+      <implementation-class>org.me.vaAgencyManager.VAAgencyManager</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

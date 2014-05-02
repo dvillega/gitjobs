@@ -10,7 +10,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="skills" class="List<KnowledgeSkill>" scope="session" />
 <jsp:useBean id="branch" class="String" scope="session" />
-<jsp:useBean id="code" class="String" scope="session" />
+<jsp:useBean id="user_mos" class="String" scope="session" />
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,7 +23,7 @@
         
             <h3>Translated Skills found using</h3>
             Military Branch: ${branch}
-            <br/>Code: ${code}
+            <br/>Code: ${user_mos}
         <br/><br/>
         <div id="skillList">
             <table>

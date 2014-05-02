@@ -17,7 +17,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import org.me.skill.KnowledgeSkill;
+import org.me.MilitaryTranslation.MilitaryTranslation;
+import org.me.MilitaryTranslation.MilitaryTranslation_Service;
+import org.me.MilitaryTranslation.KnowledgeSkill;
 
 /**
  *
@@ -82,12 +84,12 @@ public class MilitaryTranslator extends HttpServlet {
          * Get user data from submited form
          */
         String military = request.getParameter("militaryBranch");
-        String code = request.getParameter("militaryCode");
+        String user_mos = request.getParameter("militaryCode");
         List<KnowledgeSkill> result = new ArrayList<KnowledgeSkill>();
         if(isValidBranch(military)){
-//            MilitaryTranslation_Service service = new MilitaryTranslation_Service();
-//            MilitaryTranslation port = service.getMilitaryTranslationPort();
-//            result = port.getMilitarySkillCivilianTranslation(military, code);
+            MilitaryTranslation_Service service = new MilitaryTranslation_Service();
+            MilitaryTranslation port = service.getMilitaryTranslationPort();
+            result = port.getMilitarySkillCivilianTranslation(user_mos);
         }else{
             String err = "Incorrect Branch '" + military + "' Given";
         }
@@ -95,7 +97,7 @@ public class MilitaryTranslator extends HttpServlet {
         HttpSession session = request.getSession(true);
         session.setAttribute("skills", result);
         session.setAttribute("branch", military);
-        session.setAttribute("code", code);
+        session.setAttribute("user_mos", user_mos);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/Translator/translatedSkills.jsp");
         dispatcher.forward( request, response);
     }

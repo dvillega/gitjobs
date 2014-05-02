@@ -5,8 +5,8 @@
     <!-- Database connection settings -->
     <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
     <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/va_skill_dist_system</property>
-    <property name="hibernate.connection.username">user12</property>
-    <property name="hibernate.connection.password">abc123</property>
+    <property name="hibernate.connection.username">distappz</property>
+    <property name="hibernate.connection.password">distappz</property>
     <!-- SQL dialect - generate SQL for a particular database -->
     <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
     <!-- Echo all executed SQL statements -->
@@ -27,5 +27,7 @@
     <mapping class="org.me.employer.Position" file="" jar="" package="org.me.employer" resource="org/me/employer/Position.hbm.xml"/>
     <mapping class="org.me.employer.Job" file="" jar="" package="org.me.employer" resource="org/me/employer/Job.hbm.xml"/>
     <mapping class="org.me.employer.Company" file="" jar="" package="org.me.employer" resource="org/me/employer/Company.hbm.xml"/>
+    <mapping class="org.me.lookups.MOS" file="" jar="" package="org.me.lookups" resource="org/me/lookups/MOS.hbm.xml"/>
+    <mapping class="org.me.lookups.MOS_CIV_LK" file="" jar="" package="org.me.lookups" resource="org/me/lookups/MOS_CIV_LK.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

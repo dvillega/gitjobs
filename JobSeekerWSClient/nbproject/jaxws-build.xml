@@ -58,5 +58,21 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/org/me/distSystem"/>
         <delete dir="${build.generated.dir}/jax-wsCache/JobSeekerManager"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-JobMarketReporting, wsimport-client-JobSeekerManager"/>
+    <target name="wsimport-client-MilitaryTranslation" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/MilitaryTranslation"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/MilitaryTranslation" destdir="${build.generated.dir}/jax-wsCache/MilitaryTranslation" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/MilitaryTranslation/wsdl/137.30.123.173_8080/JobSeekerWS/MilitaryTranslation.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://137.30.123.173:8080/JobSeekerWS/MilitaryTranslation?wsdl" xnocompile="true" xendorsed="true" package="org.me.MilitaryTranslation">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/MilitaryTranslation/wsdl/137.30.123.173_8080/JobSeekerWS/MilitaryTranslation.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/MilitaryTranslation"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/MilitaryTranslation">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-MilitaryTranslation" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/org/me/MilitaryTranslation"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/MilitaryTranslation"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-JobMarketReporting, wsimport-client-JobSeekerManager, wsimport-client-MilitaryTranslation"/>
 </project>
