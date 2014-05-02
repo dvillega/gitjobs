@@ -28,15 +28,15 @@
     Transaction tx = null;
     try {
         
-//        s = HibernateUtil.getSessionFactory().openSession();
-//        tx = s.beginTransaction();
-//        // get jobs
-//        List skills = s.createCriteria(KnowledgeSkill.class)
-//            .setProjection(Projections.projectionList()
-//            .add( Projections.rowCount(), "skillCount")
-//            .add( Projections.groupProperty("id"))
-//            ).addOrder(Order.desc("skillCount")).list();
-//        tx.commit();
+        s = HibernateUtil.getSessionFactory().openSession();
+        tx = s.beginTransaction();
+        // get jobs
+        List skills = s.createCriteria(KnowledgeSkill.class)
+            .setProjection(Projections.projectionList()
+            .add( Projections.rowCount(), "skillCount")
+            .add( Projections.groupProperty("id"))
+            ).addOrder(Order.desc("skillCount")).list();
+        tx.commit();
         
 //	org.me.jobMarketReporting.JobMarketReporting_Service service = new org.me.jobMarketReporting.JobMarketReporting_Service();
 //	org.me.jobMarketReporting.JobMarketReporting port = service.getJobMarketReportingPort();

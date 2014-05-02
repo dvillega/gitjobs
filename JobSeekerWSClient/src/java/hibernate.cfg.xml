@@ -27,5 +27,6 @@
     <mapping class="org.me.employer.Position" file="" jar="" package="org.me.employer" resource="org/me/employer/Position.hbm.xml"/>
     <mapping class="org.me.employer.Job" file="" jar="" package="org.me.employer" resource="org/me/employer/Job.hbm.xml"/>
     <mapping class="org.me.employer.Company" file="" jar="" package="org.me.employer" resource="org/me/employer/Company.hbm.xml"/>
+    <mapping class="org.me.users.UserProfile" file="" jar="" package="org.me.users" resource="org/me/users/UserProfile.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
