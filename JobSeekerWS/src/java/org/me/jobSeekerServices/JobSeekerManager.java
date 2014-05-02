@@ -6,9 +6,16 @@
 
 package org.me.jobSeekerServices;
 
-import javax.jws.WebService;
+import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import javax.jws.WebService;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.me.distSystem.HibernateUtil;
+import org.me.jobseeker.Person;
 
 /**
  *
@@ -17,12 +24,32 @@ import javax.jws.WebParam;
 @WebService(serviceName = "JobSeekerManager")
 public class JobSeekerManager {
 
+    private static SessionFactory factory = HibernateUtil.getSessionFactory();
+    
     /**
-     * Web service operation
+     * Pull all creds that a given job seeker has that are valid
      */
     @WebMethod(operationName = "getValidCredentials")
-    public String getValidCredentials(@WebParam(name = "jobSeekerId") int jobSeekerId) {
-        //TODO write your implementation code here:
+    public String getValidCredentials(@WebParam(name = "person") String person) {
+        Session s = null;
+        Transaction tx = null;
+        try {
+            s = factory.getCurrentSession();
+            tx = s.beginTransaction();
+            // Get list of credentials job seeker has
+            Query get_job_seeker = s.createQuery("from person where name = :person");
+            get_job_seeker.setParameter("person", person);
+            List<Person> list = get_job_seeker.list();
+            Query get_certs = s.createQuery("from certificates");
+            // Prune the creds that have expired
+            
+            // Return valid creds
+            
+        } catch (Exception ex) {
+            
+        } finally {
+            
+        }
         return null;
     }
 
