@@ -18,7 +18,7 @@
         <a href="./checkPositionApplicants.jsp">Check Position Applicants</a><br/>
         <a href="./findVetWithSkills.jsp">Find Vet With Skills</a><br/>
         <a href="./getExpiredCredentials.jsp">Get Expired Credentials</a><br/>
-        <a href="./getMissingSkills.jsp">Get Missing Skills</a><br/>
+        <a href="./getMissingSkillsForm.jsp">Get Missing Skills</a><br/>
         <a href="./getValidCredentials.jsp">Get Valid Credentials</a><br/>
         <a href="./Offer Position.jsp">Offer Position</a><br/>
     </body>
