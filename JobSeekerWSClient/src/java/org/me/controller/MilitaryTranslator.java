@@ -94,6 +94,8 @@ public class MilitaryTranslator extends HttpServlet {
         
         HttpSession session = request.getSession(true);
         session.setAttribute("skills", result);
+        session.setAttribute("branch", military);
+        session.setAttribute("code", code);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/Translator/translatedSkills.jsp");
         dispatcher.forward( request, response);
     }

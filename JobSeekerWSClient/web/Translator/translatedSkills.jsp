@@ -9,6 +9,8 @@
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="skills" class="List<KnowledgeSkill>" scope="session" />
+<jsp:useBean id="branch" class="String" scope="session" />
+<jsp:useBean id="code" class="String" scope="session" />
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,6 +20,11 @@
     <body>
         <h1>Translated Skills</h1>
         <hr>
+        
+            <h3>Translated Skills found using</h3>
+            Military Branch: ${branch}
+            <br/>Code: ${code}
+        <br/><br/>
         <div id="skillList">
             <table>
                 <tr>
@@ -42,5 +49,9 @@
                 </c:choose>
             </table>
         </div>
+        <br/><br/>
+        <a href="./skillTranslatorForm.jsp">Back to Translator Form</a><br/>
+        <a href="./serviceList.jsp">Back to Translator Services</a><br/>
+        <a href="../index.jsp">Home</a><br/>
     </body>
 </html>

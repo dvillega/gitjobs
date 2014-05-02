@@ -7,6 +7,9 @@
     <service name="JobSeekerManager">
       <implementation-class>org.me.jobSeekerServices.JobSeekerManager</implementation-class>
     </service>
+    <service name="MilitaryTranslation">
+      <implementation-class>org.me.translation.MilitaryTranslation</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

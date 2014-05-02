@@ -10,6 +10,11 @@
         <servlet-class>org.me.jobSeekerServices.JobSeekerManager</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>MilitaryTranslation</servlet-name>
+        <servlet-class>org.me.translation.MilitaryTranslation</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
     <servlet-mapping>
         <servlet-name>JobMarketReporting</servlet-name>
         <url-pattern>/JobMarketReporting</url-pattern>
@@ -17,6 +22,10 @@
     <servlet-mapping>
         <servlet-name>JobSeekerManager</servlet-name>
         <url-pattern>/JobSeekerManager</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MilitaryTranslation</servlet-name>
+        <url-pattern>/MilitaryTranslation</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
