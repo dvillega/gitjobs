@@ -6,9 +6,17 @@
 
 package org.me.employerServices;
 
-import javax.jws.WebService;
+import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import javax.jws.WebService;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Projections;
+import org.me.distSystem.HibernateUtil;
+import org.me.skill.KnowledgeSkill;
 
 /**
  *
@@ -16,14 +24,33 @@ import javax.jws.WebParam;
  */
 @WebService(serviceName = "JobMarketReporting")
 public class JobMarketReporting {
-
+    
+    private static SessionFactory factory = HibernateUtil.getSessionFactory();
 
     /**
      * Web service operation
      */
     @WebMethod(operationName = "getMostDesiredCreds")
-    public String getMostDesiredCreds(@WebParam(name = "occupation") String occupation) {
-        //TODO write your implementation code here:
+    public List<String> getMostDesiredCreds(@WebParam(name = "occupation") String occupation) {
+        Session s = null;
+        Transaction tx = null;
+        try{
+            s = factory.openSession();
+            tx = s.beginTransaction();
+            // get jobs
+            List<KnowledgeSkill> skills = (List<KnowledgeSkill>) s.createCriteria(KnowledgeSkill.class)
+                    .setProjection(Projections.projectionList()
+                    .add( Projections.rowCount(), "skillCount")
+                    .add( Projections.groupProperty("id"))
+                    ).addOrder(Order.desc("skillCount"));
+            // get count of skills from jobs
+            // return top k skills
+            //TODO write your implementation code here:
+        }catch(Exception ex){
+            
+        }finally{
+            
+        }
         return null;
     }
 }

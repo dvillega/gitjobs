@@ -15,7 +15,7 @@
     <property name="hibernate.current_session_context_class">thread</property>
     <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
     <!-- Mapping resource configuration files -->
-<!--    <mapping class="org.me.jobseeker.Person" file="" jar="" package="org.me.jobseeker" resource="org/me/jobseeker/Person.hbm.xml"/>
+    <mapping class="org.me.jobseeker.Person" file="" jar="" package="org.me.jobseeker" resource="org/me/jobseeker/Person.hbm.xml"/>
     <mapping class="org.me.details.Address" file="" jar="" package="org.me.details" resource="org/me/details/Address.hbm.xml"/>
     <mapping class="org.me.education.Section" file="" jar="" package="org.me.education" resource="org/me/education/Section.hbm.xml"/>
     <mapping class="org.me.education.EducInstitute" file="" jar="" package="org.me.education" resource="org/me/education/EducInstitute.hbm.xml"/>
@@ -26,6 +26,7 @@
     <mapping class="org.me.employer.Applies" file="" jar="" package="org.me.employer" resource="org/me/employer/Applies.hbm.xml"/>
     <mapping class="org.me.employer.Position" file="" jar="" package="org.me.employer" resource="org/me/employer/Position.hbm.xml"/>
     <mapping class="org.me.employer.Job" file="" jar="" package="org.me.employer" resource="org/me/employer/Job.hbm.xml"/>
-    <mapping class="org.me.employer.Company" file="" jar="" package="org.me.employer" resource="org/me/employer/Company.hbm.xml"/>-->
+    <mapping class="org.me.employer.Company" file="" jar="" package="org.me.employer" resource="org/me/employer/Company.hbm.xml"/>
+    <mapping class="org.me.users.UserProfile" file="" jar="" package="org.me.users" resource="org/me/users/UserProfile.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
