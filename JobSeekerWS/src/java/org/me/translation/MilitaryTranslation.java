@@ -7,10 +7,12 @@
 package org.me.translation;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
+import javax.transaction.Transactional;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -33,6 +35,7 @@ public class MilitaryTranslation {
      * This is a sample web service operation
      */
     @WebMethod(operationName = "getMilitarySkillCivilianTranslation")
+    @Transactional
     public List<KnowledgeSkill> getMilitarySkillCivilianTranslation(@WebParam(name = "user_mos") String user_mos) {
         Session s = null;
         Transaction tx = null;
@@ -48,7 +51,9 @@ public class MilitaryTranslation {
             Query get_mos_code = s.createQuery("from MOS where mos = :foo");
             get_mos_code.setParameter("foo", user_mos);
             List<MOS> result1 = (List<MOS>) get_mos_code.list();
-            if (result1.isEmpty()) {
+            System.out.println("GOT HERE 1 !!");
+            if (result1.isEmpty()) {                
+                System.out.println("WTF");
                 return new ArrayList<KnowledgeSkill>();
             }
             Query get_civ_lookup = s.createQuery("from MOS_CIV_LK where mos_code = :result1");
@@ -63,10 +68,15 @@ public class MilitaryTranslation {
                 System.out.println("WTF PART 2");
                 return new ArrayList<KnowledgeSkill>();
             }
-            Query getCivSkills = s.createQuery("from KnowledgeSkill where id in (:ids)");
-            getCivSkills.setParameter("ids", ids.toArray());
+            String idString = "";
+            for(Integer id : ids)
+                idString = idString.isEmpty() ? id.toString() : idString + ","+id;
+            Query getCivSkills = s.createQuery("from KnowledgeSkill where id IN ("+ idString +")");
+//            getCivSkills.setParameter("ids", ids);
             List<KnowledgeSkill> skills = getCivSkills.list();
             tx.commit();
+            for(KnowledgeSkill skill : skills)
+                skill.setPositions(new HashSet());
             System.out.println("GOT HERE 3 !!");
             System.out.println("END");
             return skills;

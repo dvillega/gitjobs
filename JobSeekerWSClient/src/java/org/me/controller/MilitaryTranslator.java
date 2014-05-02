@@ -17,9 +17,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.transaction.Transactional;
+import org.hibernate.Session;
+import org.me.MilitaryTranslation.KnowledgeSkill;
 import org.me.MilitaryTranslation.MilitaryTranslation;
 import org.me.MilitaryTranslation.MilitaryTranslation_Service;
-import org.me.MilitaryTranslation.KnowledgeSkill;
+import org.me.distSystem.HibernateUtil;
 
 /**
  *
@@ -78,18 +81,23 @@ public class MilitaryTranslator extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
+    @Transactional
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         /* 
          * Get user data from submited form
          */
+        
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
         String military = request.getParameter("militaryBranch");
         String user_mos = request.getParameter("militaryCode");
         List<KnowledgeSkill> result = new ArrayList<KnowledgeSkill>();
         if(isValidBranch(military)){
+            System.out.println("START CLIENT");
             MilitaryTranslation_Service service = new MilitaryTranslation_Service();
             MilitaryTranslation port = service.getMilitaryTranslationPort();
             result = port.getMilitarySkillCivilianTranslation(user_mos);
+            System.out.println("GOT HERE IN CLIENT");
         }else{
             String err = "Incorrect Branch '" + military + "' Given";
         }

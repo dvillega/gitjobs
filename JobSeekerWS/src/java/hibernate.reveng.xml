@@ -16,4 +16,6 @@
   <table-filter match-name="offers_course" package="org.me.education" />
   <table-filter match-name="position_req_skills" package="org.me.employer" />
   <table-filter match-name="applies" package="org.me.employer" />
+  <table-filter match-name="mos_code" package="org.me.lookups" />
+  <table-filter match-name="mos_civ_lk" package="org.me.lookups" />
 </hibernate-reverse-engineering>
