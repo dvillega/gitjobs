@@ -4,6 +4,7 @@
     Author     : christianlevi
 --%>
 
+<%@page import="java.util.List"%>
 <%@page import="org.me.jobMarketReporting.JobMarketReporting"%>
 <%@page import="org.me.jobMarketReporting.JobMarketReporting_Service"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -15,8 +16,6 @@
     </head>
     <body>
         <h1>Most Desired Skills</h1>
-        <hr>
-        <h3>FINISH THIS!!!</h3>   
         <%-- start web service invocation --%><hr/>
     <%
     try {
@@ -25,9 +24,23 @@
 	JobMarketReporting port = service.getJobMarketReportingPort();
 	 // TODO initialize WS operation arguments here
 	String occupation = "";
-	// TODO process result here
-	String result = port.getMostDesiredCreds(occupation);
-	out.println("Result = "+result);
+	List<String> result = port.getMostDesiredCreds(occupation);
+        %>
+        <table>
+            <tr>
+                <th>Name</th>
+            </tr>
+            <%
+                if(result.isEmpty()){ %>
+                <tr><td>No Skills Found</td></tr>
+            <%  }
+            for(String r : result){ %>
+            <tr>
+                <td><%= r %></td>
+            </tr>
+            <% } %>
+        </table>
+        <%      
     } catch (Exception ex) {
 	// TODO handle custom exceptions here
         out.println(ex.toString());

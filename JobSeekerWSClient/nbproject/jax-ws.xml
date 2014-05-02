@@ -2,42 +2,6 @@
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services/>
   <clients>
-    <client name="JobMarketReporting">
-      <wsdl-url>http://localhost:8080/JobSeekerWS/JobMarketReporting?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/JobSeekerWS/JobMarketReporting.wsdl</local-wsdl-file>
-      <package-name forceReplace="true">org.me.jobMarketReporting</package-name>
-      <catalog-file>catalog.xml</catalog-file>
-      <wsimport-options>
-        <wsimport-option>
-          <wsimport-option-name>extension</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>verbose</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>fork</wsimport-option-name>
-          <wsimport-option-value>false</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/JobSeekerWS/JobMarketReporting?wsdl</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xnocompile</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>xendorsed</wsimport-option-name>
-          <wsimport-option-value>true</wsimport-option-value>
-        </wsimport-option>
-        <wsimport-option>
-          <wsimport-option-name>package</wsimport-option-name>
-          <wsimport-option-value>org.me.jobMarketReporting</wsimport-option-value>
-        </wsimport-option>
-      </wsimport-options>
-    </client>
     <client name="JobSeekerManager">
       <wsdl-url>http://localhost:8080/JobSeekerWS/JobSeekerManager?wsdl</wsdl-url>
       <local-wsdl-file>localhost_8080/JobSeekerWS/JobSeekerManager.wsdl</local-wsdl-file>
@@ -71,6 +35,42 @@
         <wsimport-option>
           <wsimport-option-name>package</wsimport-option-name>
           <wsimport-option-value>org.me.jobSeekerManager</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+    <client name="JobMarketReporting">
+      <wsdl-url>http://137.30.123.173:8080/JobSeekerWS/JobMarketReporting?wsdl</wsdl-url>
+      <local-wsdl-file>137.30.123.173_8080/JobSeekerWS/JobMarketReporting.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">org.me.jobMarketReporting</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://137.30.123.173:8080/JobSeekerWS/JobMarketReporting?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>package</wsimport-option-name>
+          <wsimport-option-value>org.me.jobMarketReporting</wsimport-option-value>
         </wsimport-option>
       </wsimport-options>
     </client>
