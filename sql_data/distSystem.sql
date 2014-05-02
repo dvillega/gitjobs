@@ -89,7 +89,6 @@ CREATE TABLE certificate (
     cer_code character(32) NOT NULL,
     title text NOT NULL,
     description text NOT NULL,
-    expire_date date,
     issued_by text NOT NULL,
     t_code character(32),
     id integer NOT NULL
@@ -545,6 +544,49 @@ ALTER TABLE public.user_profile_id_seq OWNER TO distappz;
 ALTER SEQUENCE user_profile_id_seq OWNED BY user_profile.id;
 
 
+-- DEVIN ADDED
+-- TABLE FOR WHICH CERTS A PERSON HAS
+CREATE TABLE cert_per_lookup (
+    cer_code integer NOT NULL,
+    per_code integer NOT NULL,
+    expire_date date NOT NULL,
+    id integer NOT NULL
+);
+
+ALTER TABLE public.cert_per_lookup OWNER TO distappz;
+
+CREATE SEQUENCE cert_per_lookup_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+ALTER SEQUENCE cert_per_lookup_id_seq OWNED BY cert_per_lookup.id;
+
+ALTER TABLE ONLY cert_per_lookup ALTER COLUMN id SET DEFAULT nextval('cert_per_lookup_id_seq'::regclass);
+
+CREATE TABLE mos_civ_lk (
+    mos_code integer NOT NULL,
+    civ_code integer NOT NULL,
+    id integer NOT NULL
+);
+
+ALTER TABLE public.mos_civ_lk OWNER TO distappz;
+
+CREATE SEQUENCE mos_civ_lk_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+ALTER SEQUENCE mos_civ_lk_id_seq OWNED BY mos_civ_lk.id;
+
+ALTER TABLE ONLY mos_civ_lk ALTER COLUMN id SET DEFAULT nextval('mos_civ_lk_id_seq'::regclass);
+
+-- END DEVIN ADDED
+
 --
 -- Name: id; Type: DEFAULT; Schema: public; Owner: distappz
 --
@@ -657,7 +699,7 @@ COPY applies (person_id, approved, job_id) FROM stdin;
 -- Data for Name: certificate; Type: TABLE DATA; Schema: public; Owner: distappz
 --
 
-COPY certificate (cer_code, title, description, expire_date, issued_by, t_code, id) FROM stdin;
+COPY certificate (cer_code, title, description, issued_by, t_code, id) FROM stdin;
 \.
 
 

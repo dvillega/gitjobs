@@ -1,0 +1,5 @@
+select *
+from mos_civ_lk as mos 
+join knowledge_skill as ks
+on mos.civ_code = ks.id 
+where mos.mos_code = 'YOUR_CODE_HERE';

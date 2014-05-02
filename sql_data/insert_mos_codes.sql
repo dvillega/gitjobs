@@ -4669,7 +4669,7 @@ INSERT INTO mos_code VALUES ('5900','Marines','Basic Electronics Maintenance Mar
 INSERT INTO mos_code VALUES ('5902','Marines','Electronics Maintenance Officer Aviation Command and Control (C2) (Marine Corps - Commissioned Officer only)');
 INSERT INTO mos_code VALUES ('5910','Marines','Aviation Radar Maintenance Officer (Marine Corps - Warrant Officer only)');
 INSERT INTO mos_code VALUES ('5912','Marines','AVENGER System Maintainer (Marine Corps - Enlisted)');
-INSERT INTO mos_code VALUES ('5926','Marines','Improved HAWK Auto Fire Distr and Engagement Sim or Sys. Technician (Marine Corps - Enlisted)');
+INSERT INTO mos_code VALUES ('5926','Marines','Improved HAWK Auto Fire Distr and Engagement Simor Sys. Technician (Marine Corps - Enlisted)');
 INSERT INTO mos_code VALUES ('5937','Marines','Aviation Radio Repairer (Marine Corps - Enlisted)');
 INSERT INTO mos_code VALUES ('5939','Marines','Aviation Communication Systems Technician (Marine Corps - Enlisted)');
 INSERT INTO mos_code VALUES ('5942','Marines','Aviation Radar Repairer (Marine Corps - Enlisted)');
