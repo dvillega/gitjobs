@@ -79,7 +79,7 @@ public class MilitaryTranslator extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         /* 
-         * Get user data fro submited form
+         * Get user data from submited form
          */
         String military = request.getParameter("militaryBranch");
         String code = request.getParameter("militaryCode");
