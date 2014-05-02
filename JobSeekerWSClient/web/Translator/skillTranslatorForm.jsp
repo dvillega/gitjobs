@@ -16,7 +16,7 @@
     </head>
     <body>
         <h1>Skill Translator</h1>
-        <form method="post" action="/Translator/translateSkills">
+        <form method="post" action="${pageContext.request.contextPath}/Translator/translateSkills">
             <table>
                 <tr>
                     <td>Military Branch</td>

@@ -8,6 +8,7 @@ package org.me.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -82,7 +83,7 @@ public class MilitaryTranslator extends HttpServlet {
          */
         String military = request.getParameter("militaryBranch");
         String code = request.getParameter("militaryCode");
-        List<KnowledgeSkill> result = null;
+        List<KnowledgeSkill> result = new ArrayList<KnowledgeSkill>();
         if(isValidBranch(military)){
 //            MilitaryTranslation_Service service = new MilitaryTranslation_Service();
 //            MilitaryTranslation port = service.getMilitaryTranslationPort();
@@ -93,7 +94,7 @@ public class MilitaryTranslator extends HttpServlet {
         
         HttpSession session = request.getSession(true);
         session.setAttribute("skills", result);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/translatedSkills.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/Translator/translatedSkills.jsp");
         dispatcher.forward( request, response);
     }
         

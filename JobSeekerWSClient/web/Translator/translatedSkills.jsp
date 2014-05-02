@@ -6,9 +6,9 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="org.me.skill.KnowledgeSkill"%>
-<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:useBean id="skills" type="ArrayList<KnowledgeSkill>" scope="session" />
+<jsp:useBean id="skills" class="List<KnowledgeSkill>" scope="session" />
 <!DOCTYPE html>
 <html>
     <head>
