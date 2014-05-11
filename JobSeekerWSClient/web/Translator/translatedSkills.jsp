@@ -28,23 +28,18 @@
         <div id="skillList">
             <table>
                 <tr>
-                    <th>Name</th><th>Description</th><th>Level</th>
+                    <th>Name</th>
                 </tr>
                 <c:choose>
                     <c:when test="${skills.size() == 0}">
                         <tr>
-                            <td colspan="3">No Skills Found</td>
+                            <td colspan="1">No Skills Found</td>
                         </tr>
                     </c:when>
                     <c:otherwise>
                         <c:forEach items="${skills}" var="skill">
-                            <td>${skill.getTitle()}</td>
-                            <td>${skill.getDescription()}</td>
-                            <td>${skill.getLevel()}</td>
+                            <tr><td>${skill.getTitle()}</td></tr>
                         </c:forEach>
-                        <tr>
-                            <td colspan="3">No Skills Found</td>
-                        </tr>
                     </c:otherwise>
                 </c:choose>
             </table>
